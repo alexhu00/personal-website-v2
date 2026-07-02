@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "WebFetch(domain:github.com)",
+      "Bash(unzip -o \"/Users/alexhu/Downloads/Personal portfolio website.zip\" -d \"/Users/alexhu/Downloads/portfolio_preview\")",
+      "Bash(find \"/Users/alexhu/Downloads/portfolio_preview\" -type f | sort)",
+      "mcp__bf7c680d-5fdc-5ef4-b4a0-abadb619bf0a__create_trigger",
+      "mcp__bf7c680d-5fdc-5ef4-b4a0-abadb619bf0a__send_later",
+      "Bash(python3 -m http.server 8080)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(kill 63616)",
+      "Bash(npx --yes serve --version)",
+      "Bash(curl -s \"http://localhost:8080/project.html?id=cdp-portal\")",
+      "Bash(curl -s \"http://localhost:8080/project.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/project.html\")"
+    ]
+  }
+}

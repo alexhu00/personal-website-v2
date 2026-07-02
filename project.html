@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project — Alex Hu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="nav.js"></script>
+</head>
+<body>
+<div style="font-family:'Hanken Grotesk',sans-serif;min-height:100vh;">
+
+  <nav style="padding:34px 40px 6px;display:flex;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:30px;">
+      <a href="index.html" class="nav-icon" title="Home" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></a>
+      <a href="photos.html" class="nav-icon" title="Photos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5a1.5 1.5 0 0 1 1.5-1.5h2l1-2h7l1 2h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg></a>
+      <a href="videos.html" class="nav-icon" title="Videos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="12" height="10" rx="1.5"/><path d="M15 10.5 20.5 7.5a.6.6 0 0 1 .9.5v8a.6.6 0 0 1-.9.5L15 13.5"/></svg></a>
+      <a href="work.html" class="nav-icon active" title="Work" style="display:flex;color:#1B1714;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="11" rx="1.5"/><path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M3 13h18"/></svg></a>
+      <a href="about.html" class="nav-icon" title="About" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 19.5c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></a>
+    </div>
+  </nav>
+
+  <div id="content" style="max-width:760px;margin:0 auto;padding:72px 40px 120px;">
+    <div id="loading" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#aaa089;padding-top:40px;">Loading…</div>
+  </div>
+
+  <footer style="max-width:760px;margin:0 auto;padding:0 40px 64px;border-top:1px solid #E2DBCC;">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:32px;">
+      <a href="work.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">← All work</a>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b3a997;">© 2026 Alex Hu</div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" style="display:none;" onclick="if(event.target===this)closeLightbox();">
+  <img id="lb-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+</div>
+
+<script>
+function openPhoto(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+const id = window.location.hash.slice(1) || new URLSearchParams(window.location.search).get('id');
+
+if (!id) {
+  window.location.href = 'work.html';
+} else {
+  fetch('content.json').then(r => r.json()).then(data => {
+    const all = [...(data.work.selected || []), ...(data.work.projects || [])];
+    const item = all.find(p => p.id === id);
+
+    if (!item) { window.location.href = 'work.html'; return; }
+
+    document.title = `${item.title} — Alex Hu`;
+
+    const c = document.getElementById('content');
+    document.getElementById('loading').remove();
+
+    // Back link
+    const back = document.createElement('a');
+    back.classList.add('reveal');
+    back.href = 'work.html';
+    back.className = 'work-link';
+    back.style.cssText = "font-family:'JetBrains Mono',monospace;font-size:12px;color:#897F70;text-decoration:none;display:inline-block;margin-bottom:48px;";
+    back.textContent = '← Work & Projects';
+    c.appendChild(back);
+
+    // Meta row
+    const meta = document.createElement('div');
+    meta.classList.add('reveal');
+    meta.style.cssText = "font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#aaa089;margin-bottom:18px;display:flex;gap:24px;flex-wrap:wrap;";
+    const parts = [];
+    if (item.tag) parts.push(item.tag);
+    if (item.year) parts.push(item.year);
+    if (item.company) parts.push(item.company);
+    if (item.role) parts.push(item.role);
+    meta.textContent = parts.join('  ·  ');
+    c.appendChild(meta);
+
+    // Title
+    const h1 = document.createElement('h1');
+    h1.classList.add('reveal');
+    h1.style.cssText = "font-family:'Newsreader',serif;font-weight:400;font-size:52px;line-height:1.05;letter-spacing:-0.02em;margin:0 0 36px;color:#1B1714;";
+    h1.textContent = item.title;
+    c.appendChild(h1);
+
+    // Hero — video loop takes priority over static image
+    if (item.heroVideo) {
+      const heroWrap = document.createElement('div');
+      heroWrap.classList.add('reveal');
+      heroWrap.style.cssText = 'margin-bottom:48px;border-radius:6px;overflow:hidden;';
+      const vid = document.createElement('video');
+      vid.src = item.heroVideo;
+      vid.autoplay = true; vid.loop = true; vid.muted = true; vid.playsInline = true;
+      vid.style.cssText = 'width:100%;display:block;border-radius:6px;';
+      heroWrap.appendChild(vid);
+      c.appendChild(heroWrap);
+    } else if (item.img) {
+      const heroWrap = document.createElement('div');
+      heroWrap.style.cssText = 'margin-bottom:48px;cursor:zoom-in;';
+      heroWrap.addEventListener('click', () => openPhoto(item.img));
+      const slot = document.createElement('div');
+      slot.className = 'img-slot r6';
+      slot.style.cssText = 'width:100%;aspect-ratio:16/9;';
+      const img = document.createElement('img');
+      img.src = item.img; img.alt = item.title;
+      img.onerror = () => { slot.innerHTML = '<div class="placeholder-label">Image</div>'; slot.classList.remove('has-image'); heroWrap.style.cursor = 'default'; };
+      slot.appendChild(img); slot.classList.add('has-image');
+      heroWrap.appendChild(slot);
+      c.appendChild(heroWrap);
+    }
+
+    // Body paragraphs
+    if (item.body && item.body.length) {
+      const prose = document.createElement('div');
+      prose.classList.add('reveal');
+      prose.style.cssText = "font-family:'Newsreader',serif;font-size:20px;line-height:1.65;color:#3e3a33;margin-bottom:48px;";
+      item.body.forEach((para, i) => {
+        const p = document.createElement('p');
+        p.style.margin = i === 0 ? '0 0 22px' : '22px 0';
+        p.textContent = para;
+        prose.appendChild(p);
+      });
+      c.appendChild(prose);
+    }
+
+    // Extra images/videos gallery
+    const galleryItems = (item.images || []).slice(item.heroVideo ? 0 : 1);
+    if (galleryItems.length) {
+      const gallery = document.createElement('div');
+      gallery.classList.add('reveal');
+      gallery.style.cssText = 'display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:48px;';
+      galleryItems.forEach(src => {
+        const isVideo = src.match(/\.mp4$/i);
+        const wrap = document.createElement('div');
+        wrap.style.cssText = 'border-radius:6px;overflow:hidden;';
+        if (isVideo) {
+          const vid = document.createElement('video');
+          vid.src = src; vid.autoplay = true; vid.loop = true; vid.muted = true; vid.playsInline = true;
+          vid.style.cssText = 'width:100%;display:block;';
+          wrap.appendChild(vid);
+        } else {
+          wrap.style.cursor = 'zoom-in';
+          wrap.addEventListener('click', () => openPhoto(src));
+          const slot = document.createElement('div');
+          slot.className = 'img-slot r6';
+          slot.style.cssText = 'width:100%;aspect-ratio:4/3;';
+          const img = document.createElement('img');
+          img.src = src; img.alt = '';
+          img.onerror = () => { slot.innerHTML = '<div class="placeholder-label">Image</div>'; slot.classList.remove('has-image'); wrap.style.cursor='default'; };
+          slot.appendChild(img); slot.classList.add('has-image');
+          wrap.appendChild(slot);
+        }
+        gallery.appendChild(wrap);
+      });
+      c.appendChild(gallery);
+    }
+
+    // External link
+    if (item.link && item.link !== '#') {
+      const divider = document.createElement('div');
+      divider.style.cssText = 'border-top:1px solid #E2DBCC;padding-top:32px;margin-bottom:0;';
+      const a = document.createElement('a');
+      a.href = item.link; a.target = '_blank'; a.className = 'work-link';
+      a.style.cssText = "font-family:'JetBrains Mono',monospace;font-size:13px;color:#1B1714;text-decoration:none;";
+      a.textContent = item.linkLabel || 'View project ↗';
+      divider.appendChild(a);
+      c.appendChild(divider);
+    }
+  });
+}
+</script>
+</body>
+</html>

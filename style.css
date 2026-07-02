@@ -1,0 +1,226 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #F1ECE2;
+  color: #1B1714;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { transition: color .25s ease; }
+
+.img-slot {
+  display: block;
+  background: rgba(137,127,112,0.08);
+  border: 1px dashed #cdc3ac;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-slot.r6 { border-radius: 6px; }
+
+.img-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.img-slot .placeholder-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b3a997;
+  pointer-events: none;
+}
+
+.img-slot.has-image .placeholder-label { display: none; }
+
+/* Photo grid: natural aspect ratio, no crop */
+.img-slot.photo-natural { border: none; background: none; overflow: visible; }
+.img-slot.photo-natural img { width: 100%; height: auto; object-fit: unset; border-radius: 4px; }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.nav-icon:hover { color: #1B1714 !important; }
+.nav-icon.active { color: #1B1714 !important; }
+
+.footer-link:hover { color: #897F70 !important; }
+.work-link:hover { color: #897F70 !important; }
+.prose-link:hover { color: #897F70 !important; }
+
+.status-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(137,127,112,0.06);
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 1px 2px rgba(27,23,20,0.03);
+}
+.status-btn:hover {
+  background: rgba(137,127,112,0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(27,23,20,0.08);
+}
+.status-btn .arrow { transition: transform .35s ease; }
+.status-btn:hover .arrow { transform: rotate(180deg); }
+
+.tab-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: color .2s, background .2s;
+}
+.tab-btn.active { color: #1B1714; background: #E5DCC6; }
+.tab-btn.inactive { color: #897F70; background: none; }
+.tab-btn.inactive:hover { color: #1B1714; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20,17,14,0.92);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: #f5f1e8;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes dotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(111,156,106,0.45); }
+  70% { box-shadow: 0 0 0 10px rgba(111,156,106,0); }
+  100% { box-shadow: 0 0 0 0 rgba(111,156,106,0); }
+}
+@keyframes waveWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-20deg); }
+  30% { transform: rotate(16deg); }
+  45% { transform: rotate(-16deg); }
+  60% { transform: rotate(14deg); }
+  75% { transform: rotate(-8deg); }
+  90% { transform: rotate(4deg); }
+}
+@keyframes popIn {
+  0% { transform: scale(0.3); opacity: 0.5; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes cameraPop {
+  0%   { transform: scale(0.5) rotate(-6deg); }
+  15%  { transform: scale(1.25) rotate(3deg); }
+  24%  { transform: scale(0.95) rotate(-2deg); }
+  34%  { transform: scale(1.05) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+@keyframes laptopOpen {
+  0%   { transform: scaleY(0.15); }
+  40%  { transform: scaleY(1.18); }
+  65%  { transform: scaleY(0.94); }
+  100% { transform: scaleY(1); }
+}
+@keyframes basketballBounce {
+  0%   { transform: translateY(0) scale(1,1); }
+  15%  { transform: translateY(-26px) scale(1,1); }
+  30%  { transform: translateY(0) scale(1.15,0.85); }
+  45%  { transform: translateY(-14px) scale(1,1); }
+  60%  { transform: translateY(0) scale(1.08,0.92); }
+  72%  { transform: translateY(-6px) scale(1,1); }
+  84%  { transform: translateY(0) scale(1.04,0.96); }
+  100% { transform: translateY(0) scale(1,1); }
+}
+@keyframes ballHit {
+  0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
+  10%  { transform: scale(1); opacity: 1; }
+  32%  { transform: scale(1.35); }
+  40%  { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(480px, -90px) rotate(720deg) scale(0.7); opacity: 0; }
+}
+@keyframes frisbeeFly {
+  0%   { transform: translate(0, 0) scaleY(0.55); opacity: 0; }
+  8%   { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translate(300px, -42px) scaleY(0.55); opacity: 0; }
+}
+@keyframes trainDash {
+  0%   { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-380px); opacity: 0; }
+}
+@keyframes flashPulse {
+  0%, 16%  { opacity: 0; }
+  22%      { opacity: 0.95; }
+  32%, 100% { opacity: 0; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.photo-grid-item { cursor: zoom-in; }
+.photo-grid-item:hover .img-slot { opacity: 0.88; }
+
+.work-card:hover { opacity: 0.85; }
+
+@media (max-width: 700px) {
+  .home-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .work-grid-2 { grid-template-columns: 1fr !important; }
+  .work-grid-3 { grid-template-columns: 1fr !important; }
+  .about-grid { grid-template-columns: 1fr !important; }
+  .video-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  nav { padding: 20px 20px 6px !important; }
+  header { padding-left: 20px !important; padding-right: 20px !important; }
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+  footer { padding-left: 20px !important; padding-right: 20px !important; }
+  h1 { font-size: 38px !important; }
+}

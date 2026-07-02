@@ -1,0 +1,558 @@
+{
+  "photos": {
+    "life": [
+      {
+        "src": "assets/photos/life/DSC02073.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02107.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02132.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02151-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02165-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02180.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC01943.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02050.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC02061.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC03708.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC03716-3.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC03779.jpg"
+      },
+      {
+        "src": "assets/photos/life/DSC04712 3.JPG"
+      },
+      {
+        "src": "assets/photos/life/DSC04920-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0004.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0233-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0274-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0338.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0355.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0363.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0435.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0449.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0503.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0509.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0548.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0676.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0706-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0716.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0738.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC0778.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1020.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1062.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1066.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1155.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1158.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1169.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1181.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1188.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1358-2.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1360.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1404.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1482.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1483.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1624.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC1849.jpg"
+      },
+      {
+        "src": "assets/photos/life/_DSC2013.jpg"
+      },
+      {
+        "src": "assets/photos/life/toronto-CN-tower-union-station.jpg"
+      }
+    ],
+    "graduation": [
+      {
+        "src": "assets/photos/graduation/DSC05741.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC05761.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC05807.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC06026.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC06196.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC06311.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC06872.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC06897.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07025.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07079.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07163.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07373.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07560.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07630.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07662.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07854.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07872.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07978.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08144.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08203.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08264.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08369.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08406.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08479.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08494.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08592.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0081.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0123.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0187.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0243.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0375-2.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0404-2.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0424-2.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0502.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0558.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0568.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0620.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0707.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0777.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0820.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0869.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0881.jpg"
+      },
+      {
+        "src": "assets/photos/graduation/_DSC0944.jpg"
+      }
+    ],
+    "engagements": [
+      {
+        "src": "assets/photos/engagements/DSC02619.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02646-2.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02649.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02663.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02679.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02682.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02707.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02719.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02720.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02728.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02736.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02747.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02752.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02755.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02765.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02833.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02864.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02870.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02880.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02889.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02932.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02954.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02956.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02960.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC03106.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC03165.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC03265.jpg"
+      },
+      {
+        "src": "assets/photos/engagements/DSC03310.jpg"
+      }
+    ]
+  },
+  "home": {
+    "media": [
+      {
+        "src": "assets/photos/life/DSC02073.jpg",
+        "type": "photo"
+      },
+      {
+        "src": "assets/videos/vball chop 2.mp4",
+        "type": "video"
+      },
+      {
+        "src": "assets/photos/graduation/DSC08144.jpg",
+        "type": "photo"
+      },
+      {
+        "src": "assets/videos/sam x lily_2.mp4",
+        "type": "video"
+      },
+      {
+        "src": "assets/photos/engagements/DSC02646-2.jpg",
+        "type": "photo"
+      },
+      {
+        "src": "assets/videos/kai x jasper.mp4",
+        "type": "video"
+      },
+      {
+        "src": "assets/photos/graduation/DSC07079.jpg",
+        "type": "photo"
+      },
+      {
+        "src": "assets/photos/life/DSC02151-2.jpg",
+        "type": "photo"
+      },
+      {
+        "src": "assets/videos/vball chop 1.mp4",
+        "type": "video"
+      },
+      {
+        "src": "assets/photos/life/DSC03708.jpg",
+        "type": "photo"
+      }
+    ]
+  },
+  "videos": [
+    {
+      "src": "assets/videos/vball chop 2.mp4",
+      "title": "Vball Chop 2",
+      "tag": "",
+      "instagram": ""
+    },
+    {
+      "src": "assets/videos/kai x jasper.mp4",
+      "title": "Kai X Jasper",
+      "tag": "",
+      "instagram": ""
+    },
+    {
+      "src": "assets/videos/russian-ridge-final.mp4",
+      "title": "Russian Ridge Final",
+      "tag": "",
+      "instagram": "",
+      "previewTime": 1.5
+    },
+    {
+      "src": "assets/videos/sam x lily_2.mp4",
+      "title": "Sam X Lily 2",
+      "tag": "",
+      "instagram": ""
+    },
+    {
+      "src": "assets/videos/vball chop 1.mp4",
+      "title": "Vball Chop 1",
+      "tag": "",
+      "instagram": ""
+    },
+    {
+      "src": "assets/videos/emma x jasper 2.mp4",
+      "title": "Emma X Jasper 2",
+      "tag": "",
+      "instagram": ""
+    },
+    {
+      "src": "assets/videos/vball chop 3.mp4",
+      "title": "Vball Chop 3",
+      "tag": "",
+      "instagram": ""
+    }
+  ],
+  "about": {
+    "portrait": "assets/about/DSC05198.JPG"
+  },
+  "work": {
+    "selected": [
+      {
+        "id": "cdp-portal",
+        "img": "assets/work/CDP Developer Portal/portal-dashboard.png",
+        "tag": "Product · 0→1",
+        "title": "CDP Developer Portal",
+        "description": "Led product for an all-new logged-in developer platform — dashboard, wallets, onramp, and API key management — built to get developers from signup to first integration in minutes.",
+        "link": "https://www.coinbase.com/developer-platform",
+        "linkLabel": "cdp.coinbase.com ↗",
+        "role": "Product Manager",
+        "year": "2023 — 2024",
+        "company": "Coinbase Developer Platform",
+        "body": [
+          "The Coinbase Developer Platform (CDP) needed a logged-in home — somewhere developers could manage their projects, spin up wallets, configure onramp flows, and rotate API keys without digging through docs or emailing support.",
+          "I led product for the 0→1 build of that portal: defining scope, writing specs, running design reviews, and coordinating across engineering, design, and legal to ship the first version. The goal was simple — get a developer from signup to their first successful API call in under five minutes.",
+          "The portal launched with dashboard, wallet management, onramp configuration, and API key management. Post-launch, we iterated on the onboarding funnel based on activation data and cut time-to-first-call by roughly 40%."
+        ],
+        "images": [
+          "assets/work/CDP Developer Portal/portal-welcome.mp4",
+          "assets/work/CDP Developer Portal/portal-dashboard.png",
+          "assets/work/CDP Developer Portal/portal-api-keys.mp4",
+          "assets/work/CDP Developer Portal/portal-payments.mp4",
+          "assets/work/CDP Developer Portal/portal-customer-resources.mp4"
+        ],
+        "heroVideo": "assets/work/CDP Developer Portal/portal-welcome.mp4"
+      },
+      {
+        "id": "cdp-docs",
+        "img": "assets/work/cdp-docs.jpg",
+        "tag": "Docs · AI",
+        "title": "AI-Native Docs, with Mintlify",
+        "description": "Led a full overhaul of CDP's developer docs — rebuilt the information architecture, shipped AI-first features like one-click copy-to-LLM and an MCP server, and cut internal preview build times from 30 minutes to under one. Shipped in 6 weeks.",
+        "link": "https://www.coinbase.com/blog/coinbase-pm-blog-ai-docs-and-mintlify",
+        "linkLabel": "Read the writeup ↗",
+        "role": "Product Manager",
+        "year": "2024",
+        "company": "Coinbase Developer Platform",
+        "body": [
+          "CDP's developer documentation had grown organically for years — good content buried under inconsistent structure, a slow internal preview workflow, and no affordances for the way developers actually use docs in 2024 (copy-pasting into LLMs, asking AI assistants).",
+          "I scoped and led a full overhaul in partnership with Mintlify. We rebuilt the information architecture from scratch, consolidated hundreds of pages, and shipped a set of AI-native features: one-click copy-to-LLM for any code block, an MCP server so developers could query the docs directly from their AI tools, and an improved search experience.",
+          "On the internal tooling side, we cut preview build times from 30 minutes to under one — which meant the docs team could actually iterate in real time. The whole thing shipped in 6 weeks."
+        ],
+        "images": [
+          "assets/work/cdp-docs.jpg"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "frisbee-jerseys",
+        "img": "assets/work/jerseys.jpg",
+        "title": "Ultimate Frisbee Jerseys",
+        "year": "2024",
+        "tag": "Design",
+        "description": "Designed a full custom jersey kit for my club team, from concept sketches to production-ready print files.",
+        "link": "#",
+        "linkLabel": "Visit ↗",
+        "body": [
+          "Designed a complete custom jersey kit for my club ultimate frisbee team — both the home and away sets. Started from rough sketches, iterated through a few concepts based on team feedback, and ended up with production-ready vector files sent to the manufacturer.",
+          "The design had to work at small print sizes, hold up on dark and light colorways, and feel like something the team was actually excited to wear. We went through three rounds of revisions before locking it in."
+        ],
+        "images": [
+          "assets/work/jerseys.jpg"
+        ]
+      },
+      {
+        "id": "svs-graphics",
+        "img": "assets/work/svs.jpg",
+        "title": "Social Media Graphics",
+        "year": "2019 — 2021",
+        "tag": "Design",
+        "description": "Created marketing & graphic design assets for NYU's Strategic Venture Society, an undergraduate VC club.",
+        "link": "https://alexhu.netlify.app/svs",
+        "linkLabel": "View the work ↗",
+        "body": [
+          "Served as the in-house designer for NYU's Strategic Venture Society — an undergraduate VC club focused on connecting students with the startup ecosystem.",
+          "Over two years I created the full range of visual assets: event promotion graphics, speaker announcement cards, LinkedIn and Instagram content, and pitch deck templates. Developed a consistent visual identity that carried across all touchpoints."
+        ],
+        "images": [
+          "assets/work/svs.jpg"
+        ]
+      },
+      {
+        "id": "sustainability",
+        "img": "assets/work/sustainability.jpg",
+        "title": "Sustainability Proposal",
+        "year": "2020",
+        "tag": "Writing",
+        "description": "Wrote a feature on Olympic sustainability for NYU Stern's Corporate Action magazine, The Call.",
+        "link": "https://issuu.com/corporateaction/docs/thecall2020_nyustern/26",
+        "linkLabel": "Read the piece ↗",
+        "body": [
+          "Wrote a feature article on the sustainability challenges facing the Olympic Games for The Call, NYU Stern's Corporate Action magazine.",
+          "The piece examined how host cities have historically struggled with post-Games infrastructure costs and environmental footprint, and proposed a framework for evaluating future bids through a sustainability lens."
+        ],
+        "images": [
+          "assets/work/sustainability.jpg"
+        ]
+      }
+    ]
+  }
+}

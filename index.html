@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Hu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="nav.js"></script>
+</head>
+<body>
+<div style="font-family: 'Hanken Grotesk', sans-serif; min-height: 100vh;">
+
+  <nav style="padding: 34px 40px 6px; display: flex; justify-content: center;">
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <a href="index.html" class="nav-icon active" title="Home" aria-label="Home" style="display:flex;color:#1B1714;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></a>
+      <a href="photos.html" class="nav-icon" title="Photos" aria-label="Photos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5a1.5 1.5 0 0 1 1.5-1.5h2l1-2h7l1 2h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg></a>
+      <a href="videos.html" class="nav-icon" title="Videos" aria-label="Videos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="12" height="10" rx="1.5"/><path d="M15 10.5 20.5 7.5a.6.6 0 0 1 .9.5v8a.6.6 0 0 1-.9.5L15 13.5"/></svg></a>
+      <a href="work.html" class="nav-icon" title="Work" aria-label="Work" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="11" rx="1.5"/><path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M3 13h18"/></svg></a>
+      <a href="about.html" class="nav-icon" title="About" aria-label="About" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 19.5c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></a>
+    </div>
+  </nav>
+
+  <header style="max-width: 600px; margin: 0 auto; padding: 92px 24px 80px; position: relative;">
+    <div style="margin-bottom: 24px;">
+      <button id="status-btn" class="status-btn">
+        <span id="status-dot" style="width:9px;height:9px;border-radius:999px;background:#6f9c6a;animation:dotPulse 2.2s infinite;flex:none;"></span>
+        <span id="status-text" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#6a635a;"></span>
+        <span class="arrow" style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;color:#897F70;line-height:1;">↻</span>
+      </button>
+    </div>
+    <div id="fly-container" style="position:relative;pointer-events:none;height:0;overflow:visible;"></div>
+    <h1 class="reveal" style="font-family:'Newsreader',serif;font-weight:400;font-size:52px;line-height:1.05;letter-spacing:-0.015em;margin:0;color:#1B1714;position:relative;z-index:1;transition-delay:0.1s;">Hi, I'm Alex <span id="slot-emoji" style="display:inline-block;opacity:0;"></span></h1>
+    <p class="reveal" style="font-family:'Newsreader',serif;font-size:21px;line-height:1.55;color:#4f4942;margin:28px 0 18px;transition-delay:0.1s;">I'm a product manager in New York who enjoys <a href="photos.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">photography</a>, <a href="videos.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">making videos</a> &amp; tinkering with various <a href="work.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">creative projects</a>.</p>
+    <p class="reveal" style="font-family:'Newsreader',serif;font-size:18px;line-height:1.6;color:#6a635a;margin:0 0 30px;transition-delay:0.1s;">This little corner of the internet is where all of it lives. Have a look around.</p>
+    <div class="reveal" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:#9a917f;transition-delay:0.1s;">Based in New York 🗽&nbsp;&nbsp;/&nbsp;&nbsp;Born in Markham, ON 🍁</div>
+  </header>
+
+  <section style="max-width:960px;margin:0 auto;padding:0 40px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:26px 0 20px;border-top:1px solid #E2DBCC;">
+      <div style="display:flex;gap:18px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">01 — Photography</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#cabf9f;">/</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">02 — Video</span>
+      </div>
+      <div style="display:flex;gap:20px;">
+        <a href="photos.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">Photos →</a>
+        <a href="videos.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">Videos →</a>
+      </div>
+    </div>
+    <div id="home-grid" class="home-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;"></div>
+  </section>
+
+  <div style="max-width:960px;margin:0 auto;padding:0 40px;"><hr style="border:none;border-top:1px solid #E2DBCC;margin:48px 0 0;"></div>
+
+  <section style="max-width:960px;margin:0 auto;padding:0 40px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:32px 0 20px;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">03 — Work &amp; Projects</span>
+      <a href="work.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">See all →</a>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#b0a288;margin-bottom:16px;">Selected — Coinbase Developer Platform</div>
+    <div id="work-grid" class="work-grid-2" style="display:grid;grid-template-columns:1fr;gap:64px;margin-bottom:40px;"></div>
+  </section>
+
+  <footer style="max-width:960px;margin:72px auto 0;padding:40px 40px 64px;border-top:1px solid #E2DBCC;">
+    <div style="display:flex;justify-content:flex-end;align-items:flex-start;gap:40px;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+        <a href="https://www.instagram.com/ah.50mm/" target="_blank" class="footer-link" style="color:#1B1714;text-decoration:none;">Instagram ↗</a>
+        <a href="https://www.linkedin.com/in/alex-hu00/" target="_blank" class="footer-link" style="color:#1B1714;text-decoration:none;">LinkedIn ↗</a>
+        <a href="https://github.com/alexhu00" target="_blank" class="footer-link" style="color:#1B1714;text-decoration:none;">GitHub ↗</a>
+        <a href="mailto:alexhu.ont@gmail.com" class="footer-link" style="color:#1B1714;text-decoration:none;">alexhu.ont@gmail.com</a>
+      </div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b3a997;margin-top:40px;">© 2026 Alex Hu — Built from scratch in New York.</div>
+  </footer>
+
+</div>
+
+<div id="lightbox" class="lightbox" style="display:none;" onclick="if(event.target===this)closeLightbox();">
+  <img id="lb-img" src="" alt="" style="display:none;">
+  <div id="lb-video" style="display:none;width:90vw;max-width:900px;aspect-ratio:16/9;"></div>
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+</div>
+
+<script>
+// ── STATUS BADGE ──────────────────────────────────────────────
+const statuses = [
+  { text:'Waving hello',            emoji:'👋', kind:'wave' },
+  { text:'On the subway',           emoji:'🚄', kind:'train' },
+  { text:'Somewhere with a camera', emoji:'📸', kind:'camera' },
+  { text:'Between meetings',        emoji:'💻', kind:'laptop' },
+  { text:'Watching the Blue Jays',  emoji:'⚾', kind:'ball' },
+  { text:'Playing frisbee',         emoji:'🥏', kind:'frisbee' },
+  { text:'Laughing like Kawhi',     emoji:'🏀', kind:'basketball' },
+];
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+let order=shuffle(statuses),idx=0,ghostPlaying=false;
+const statusText=document.getElementById('status-text');
+const slotEmoji=document.getElementById('slot-emoji');
+const flyC=document.getElementById('fly-container');
+const traveling={train:true,ball:true,frisbee:true};
+const dur={ball:1300,frisbee:850,train:1200};
+
+function spawnGhost(e){
+  const g=document.createElement('span');
+  g.textContent=e.emoji;
+  const css={ball:'position:absolute;font-size:46px;left:296px;top:10px;pointer-events:none;animation:ballHit 1.3s linear forwards;',
+              frisbee:'position:absolute;font-size:54px;left:296px;top:10px;pointer-events:none;animation:frisbeeFly 0.85s ease-in forwards;',
+              train:'position:absolute;font-size:46px;left:296px;top:10px;pointer-events:none;animation:trainDash 1.2s cubic-bezier(.4,0,1,1) forwards;'}[e.kind];
+  g.style.cssText=css;flyC.appendChild(g);setTimeout(()=>g.remove(),(dur[e.kind]||1300)+100);
+}
+function spawnFlash(){
+  const f=document.createElement('span');
+  f.style.cssText='position:absolute;left:236px;top:80px;width:160px;height:160px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(255,255,255,0.95),rgba(255,255,255,0));z-index:3;animation:flashPulse 1.5s ease-out forwards;';
+  flyC.appendChild(f);setTimeout(()=>f.remove(),1600);
+}
+function applyEntry(e){
+  statusText.textContent=e.text;slotEmoji.textContent=e.emoji;
+  if(traveling[e.kind]){
+    slotEmoji.style.cssText='display:inline-block;opacity:0;';ghostPlaying=true;spawnGhost(e);
+    setTimeout(()=>{ghostPlaying=false;slotEmoji.style.cssText='display:inline-block;opacity:1;animation:popIn 0.5s cubic-bezier(.34,1.56,.64,1) forwards;';},dur[e.kind]);
+  }else if(e.kind==='wave'){slotEmoji.style.cssText='display:inline-block;transform-origin:70% 70%;animation:waveWiggle 1.5s ease-in-out forwards;';
+  }else if(e.kind==='camera'){slotEmoji.style.cssText='display:inline-block;transform-origin:50% 50%;animation:cameraPop 1.5s ease-out forwards;';spawnFlash();
+  }else if(e.kind==='laptop'){slotEmoji.style.cssText='display:inline-block;transform-origin:50% 100%;animation:laptopOpen 1.2s ease-out forwards;';
+  }else if(e.kind==='basketball'){slotEmoji.style.cssText='display:inline-block;transform-origin:50% 100%;animation:basketballBounce 1.3s ease-out forwards;';
+  }else{slotEmoji.style.cssText='display:inline-block;';}
+}
+setTimeout(() => applyEntry(order[0]), 700);
+document.getElementById('status-btn').addEventListener('click',()=>{
+  if(ghostPlaying)return;idx=(idx+1)%order.length;if(idx===0)order=shuffle(statuses);applyEntry(order[idx]);
+});
+
+// ── LIGHTBOX ─────────────────────────────────────────────────
+function openPhoto(src){
+  const lb=document.getElementById('lightbox');
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lb-img').style.display='block';
+  document.getElementById('lb-video').style.display='none';
+  document.getElementById('lb-video').innerHTML='';
+  lb.style.display='flex';
+}
+function openVideo(url){
+  let embedUrl=url;
+  const yt=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+  if(yt)embedUrl=`https://www.youtube.com/embed/${yt[1]}?autoplay=1`;
+  const lb=document.getElementById('lightbox');
+  document.getElementById('lb-img').style.display='none';
+  const vd=document.getElementById('lb-video');
+  vd.innerHTML=`<iframe src="${embedUrl}" style="width:100%;height:100%;border:none;border-radius:4px;" allow="autoplay;fullscreen" allowfullscreen></iframe>`;
+  vd.style.display='block';lb.style.display='flex';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+  document.getElementById('lb-video').innerHTML='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+// ── CONTENT LOADING ───────────────────────────────────────────
+fetch('content.json').then(r=>r.json()).then(data=>{
+
+  // Home media strip
+  const hg=document.getElementById('home-grid');
+  data.home.media.forEach(item=>{
+    const div=document.createElement('div');
+    div.style.cssText='position:relative;cursor:zoom-in;';div.classList.add('reveal');
+    const isLocalVideo = item.type==='video' && item.src && item.src.match(/\.mp4$/i);
+    let slot;
+    if(isLocalVideo){
+      slot=document.createElement('video');
+      slot.src=item.src; slot.autoplay=true; slot.loop=true; slot.muted=true; slot.playsInline=true;
+      slot.style.cssText='width:100%;aspect-ratio:9/16;object-fit:cover;display:block;border-radius:4px;';
+      div.style.cursor='pointer';
+    } else {
+      slot=document.createElement('div');
+      slot.className='img-slot';
+      slot.style.cssText='width:100%;aspect-ratio:9/16;';
+      if(item.src){
+        const img=document.createElement('img');
+        img.src=item.src;img.alt='';
+        img.onerror=()=>{slot.innerHTML='<div class="placeholder-label">'+(item.type==='video'?'Video':'Photo')+'</div>';};
+        slot.appendChild(img);slot.classList.add('has-image');
+      }else{slot.innerHTML='<div class="placeholder-label">'+(item.type==='video'?'Video still':'Photo')+'</div>';}
+    }
+    div.appendChild(slot);
+    if(item.type==='video'){
+      const badge=document.createElement('span');
+      badge.style.cssText='position:absolute;left:7px;bottom:7px;pointer-events:none;width:20px;height:20px;border-radius:999px;background:rgba(27,23,20,0.78);color:#f5f1e8;display:flex;align-items:center;justify-content:center;font-size:7px;padding-left:1px;';
+      badge.textContent='▶';div.appendChild(badge);
+      div.addEventListener('click',()=>{ if(item.url)openVideo(item.url); else if(item.src)openVideo({src:item.src}); });
+    }else{
+      div.addEventListener('click',()=>{ if(item.src)openPhoto(item.src); });
+    }
+    hg.appendChild(div);
+  });
+
+  // Home work grid (first 2 selected items)
+  const wg=document.getElementById('work-grid');
+  data.work.selected.forEach(item=>{
+    const a=document.createElement('a');
+    a.href=`project.html#${item.id}`;a.className='work-card reveal';a.style.cssText='text-decoration:none;display:block;transition:opacity .2s;';
+    let thumb;
+    if(item.heroVideo){
+      thumb=document.createElement('video');
+      thumb.src=item.heroVideo;thumb.autoplay=true;thumb.loop=true;thumb.muted=true;thumb.playsInline=true;
+      thumb.style.cssText='width:100%;display:block;border-radius:6px;';
+    } else {
+      thumb=document.createElement('div');
+      thumb.className='img-slot r6';thumb.style.cssText='width:100%;aspect-ratio:4/3;';
+      if(item.img){const img=document.createElement('img');img.src=item.img;img.alt=item.title;img.onerror=()=>{thumb.innerHTML='<div class="placeholder-label">Screenshot</div>';};thumb.appendChild(img);thumb.classList.add('has-image');}
+      else{thumb.innerHTML='<div class="placeholder-label">Screenshot</div>';}
+    }
+    a.innerHTML=`<h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:22px;margin:28px 0 0;color:#1B1714;">${item.title}</h3><p style="font-family:'Newsreader',serif;font-size:15px;line-height:1.5;color:#6a635a;margin:8px 0 0;">${item.description}</p>`;
+    a.insertBefore(thumb,a.firstChild);
+    wg.appendChild(a);
+  });
+});
+</script>
+</body>
+</html>
