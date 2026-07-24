@@ -460,15 +460,15 @@
         "img": "assets/work/CDP Developer Portal/portal-dashboard.png",
         "tag": "Product · 0→1",
         "title": "CDP Developer Portal",
-        "description": "Led product for an all-new logged-in developer platform — dashboard, wallets, onramp, and API key management — built to get developers from signup to first integration in minutes.",
+        "description": "Led product for an all-new logged-in developer platform (dashboard, wallets, onramp, and API key management) built to get developers from signup to first integration in minutes.",
         "link": "https://www.coinbase.com/developer-platform",
         "linkLabel": "cdp.coinbase.com ↗",
         "role": "Product Manager",
-        "year": "2023 — 2024",
+        "year": "2023-2024",
         "company": "Coinbase Developer Platform",
         "body": [
-          "The Coinbase Developer Platform (CDP) needed a logged-in home — somewhere developers could manage their projects, spin up wallets, configure onramp flows, and rotate API keys without digging through docs or emailing support.",
-          "I led product for the 0→1 build of that portal: defining scope, writing specs, running design reviews, and coordinating across engineering, design, and legal to ship the first version. The goal was simple — get a developer from signup to their first successful API call in under five minutes.",
+          "The Coinbase Developer Platform (CDP) needed a logged-in home: somewhere developers could manage their projects, spin up wallets, configure onramp flows, and rotate API keys without digging through docs or emailing support.",
+          "I led product for the 0→1 build of that portal: defining scope, writing specs, running design reviews, and coordinating across engineering, design, and legal to ship the first version. The goal was simple: get a developer from signup to their first successful API call in under five minutes.",
           "The portal launched with dashboard, wallet management, onramp configuration, and API key management. Post-launch, we iterated on the onboarding funnel based on activation data and cut time-to-first-call by roughly 40%."
         ],
         "images": [
@@ -482,29 +482,29 @@
       },
       {
         "id": "cdp-docs",
-        "img": "assets/work/cdp-docs.jpg",
+        "img": "assets/work/cdp-docs/cdp-docs-preview.jpg",
         "tag": "Docs · AI",
         "title": "AI-Native Docs, with Mintlify",
-        "description": "Led a full overhaul of CDP's developer docs — rebuilt the information architecture, shipped AI-first features like one-click copy-to-LLM and an MCP server, and cut internal preview build times from 30 minutes to under one. Shipped in 6 weeks.",
+        "description": "Led a full overhaul of CDP's developer docs: rebuilt the information architecture, shipped AI-first features like one-click copy-to-LLM and an MCP server, and cut internal preview build times from 30 minutes to under one. Shipped in 6 weeks.",
         "link": "https://www.coinbase.com/blog/coinbase-pm-blog-ai-docs-and-mintlify",
-        "linkLabel": "Read the writeup ↗",
+        "linkLabel": "Read my writeup on Coinbase's blog ↗",
         "role": "Product Manager",
         "year": "2024",
         "company": "Coinbase Developer Platform",
         "body": [
-          "CDP's developer documentation had grown organically for years — good content buried under inconsistent structure, a slow internal preview workflow, and no affordances for the way developers actually use docs in 2024 (copy-pasting into LLMs, asking AI assistants).",
-          "I scoped and led a full overhaul in partnership with Mintlify. We rebuilt the information architecture from scratch, consolidated hundreds of pages, and shipped a set of AI-native features: one-click copy-to-LLM for any code block, an MCP server so developers could query the docs directly from their AI tools, and an improved search experience.",
-          "On the internal tooling side, we cut preview build times from 30 minutes to under one — which meant the docs team could actually iterate in real time. The whole thing shipped in 6 weeks."
+          "CDP's developer docs had grown organically for years: inconsistent information architecture, a slow internal preview loop, and no affordances for how developers actually use docs now (copy-pasting into LLMs, asking AI assistants directly).",
+          "I scoped a full overhaul in partnership with Mintlify: rebuilt the IA from scratch, consolidated hundreds of pages, and shipped a set of AI-native features: one-click copy-to-LLM for any code block, an MCP server so developers could query the docs from their AI tools, and better search. On the tooling side, we cut internal preview build times from 30 minutes to under one, so the docs team could actually iterate in real time.",
+          "Shipped in 6 weeks. I wrote up the full story (the ETH Denver research that kicked this off, what we learned, what I'd do differently) on Coinbase's blog, linked above."
         ],
-        "images": [
-          "assets/work/cdp-docs.jpg"
-        ]
+        "images": [],
+        "heroVideo": "assets/work/cdp-docs/cdp-docs-preview.mp4",
+        "linkDirect": true
       }
     ],
     "projects": [
       {
         "id": "frisbee-jerseys",
-        "img": "assets/work/jerseys.jpg",
+        "img": "assets/work/frisbee-jerseys/munchies/action-2.jpg",
         "title": "Ultimate Frisbee Jerseys",
         "year": "2024",
         "tag": "Design",
@@ -512,33 +512,80 @@
         "link": "#",
         "linkLabel": "Visit ↗",
         "body": [
-          "Designed a complete custom jersey kit for my club ultimate frisbee team — both the home and away sets. Started from rough sketches, iterated through a few concepts based on team feedback, and ended up with production-ready vector files sent to the manufacturer.",
+          "Designed a complete custom jersey kit for my club ultimate frisbee team, both the home and away sets. Started from rough sketches, iterated through a few concepts based on team feedback, and ended up with production-ready vector files sent to the manufacturer.",
           "The design had to work at small print sizes, hold up on dark and light colorways, and feel like something the team was actually excited to wear. We went through three rounds of revisions before locking it in."
         ],
         "images": [
-          "assets/work/jerseys.jpg"
+          "assets/work/frisbee-jerseys/munchies/action-2.jpg",
+          "assets/work/frisbee-jerseys/munchies/LAYOUT Munchies New York (Light Short Sleeve).png",
+          "assets/work/frisbee-jerseys/munchies/LAYOUT Munchies New York (Dark Short Sleeve).png",
+          "assets/work/frisbee-jerseys/munchies/action-1.jpg",
+          "assets/work/frisbee-jerseys/munchies/action-3.jpg",
+          "assets/work/frisbee-jerseys/munchies/action-4.jpg",
+          "assets/work/frisbee-jerseys/munchies/action-5.jpg",
+          "assets/work/frisbee-jerseys/munchies/action-6.jpg",
+          "assets/work/frisbee-jerseys/munchies/IMG_1046.JPG",
+          "assets/work/frisbee-jerseys/munchies/IMG_1688.jpg",
+          "assets/work/frisbee-jerseys/munchies/DSC03654.jpg",
+          "assets/work/frisbee-jerseys/munchies/DSC04184 (1).jpg",
+          "assets/work/frisbee-jerseys/munchies/DSC03997 (1).jpg",
+          "assets/work/frisbee-jerseys/munchies/7a18158b42a03b82654af90cb4a1c399.jpeg",
+          "assets/work/frisbee-jerseys/heat wave/LAYOUT Heat Wave (Light Short Sleeve) Option 1.png",
+          "assets/work/frisbee-jerseys/heat wave/LAYOUT Heat Wave (Dark Long Sleeve).png",
+          "assets/work/frisbee-jerseys/heat wave/LAYOUT Heat Wave (Short Sleeve).png",
+          "assets/work/frisbee-jerseys/heat wave/action-1.jpg",
+          "assets/work/frisbee-jerseys/heat wave/action-2.jpg",
+          "assets/work/frisbee-jerseys/heat wave/action-3.jpg",
+          "assets/work/frisbee-jerseys/heat wave/action-4.jpg",
+          "assets/work/frisbee-jerseys/heat wave/action-5.jpg",
+          "assets/work/frisbee-jerseys/heat wave/action-6.jpg",
+          "assets/work/frisbee-jerseys/heat wave/IMG_3788.PNG"
         ]
       },
       {
         "id": "svs-graphics",
-        "img": "assets/work/svs.jpg",
+        "img": "assets/work/svs-graphics/svs-cover.jpeg",
         "title": "Social Media Graphics",
-        "year": "2019 — 2021",
+        "year": "2019-2021",
         "tag": "Design",
         "description": "Created marketing & graphic design assets for NYU's Strategic Venture Society, an undergraduate VC club.",
         "link": "https://alexhu.netlify.app/svs",
         "linkLabel": "View the work ↗",
         "body": [
-          "Served as the in-house designer for NYU's Strategic Venture Society — an undergraduate VC club focused on connecting students with the startup ecosystem.",
+          "Served as the in-house designer for NYU's Strategic Venture Society, an undergraduate VC club focused on connecting students with the startup ecosystem.",
           "Over two years I created the full range of visual assets: event promotion graphics, speaker announcement cards, LinkedIn and Instagram content, and pitch deck templates. Developed a consistent visual identity that carried across all touchpoints."
         ],
         "images": [
-          "assets/work/svs.jpg"
+          "assets/work/svs-graphics/svs-cover.jpeg",
+          "assets/work/svs-graphics/1-venture-team.png",
+          "assets/work/svs-graphics/2-venture-team.png",
+          "assets/work/svs-graphics/3-startup-studio.png",
+          "assets/work/svs-graphics/4-startup-studio.png",
+          "assets/work/svs-graphics/5-feather.png",
+          "assets/work/svs-graphics/6-feather2.png",
+          "assets/work/svs-graphics/7-soylent.png",
+          "assets/work/svs-graphics/7-soylent2.png",
+          "assets/work/svs-graphics/9-quip1.png",
+          "assets/work/svs-graphics/9-quip2.png",
+          "assets/work/svs-graphics/night-market.png",
+          "assets/work/svs-graphics/night-market2.png",
+          "assets/work/svs-graphics/night-market3-Newsletter.png",
+          "assets/work/svs-graphics/tech spoof 1.png",
+          "assets/work/svs-graphics/tech spoof 2.png",
+          "assets/work/svs-graphics/tech spoof 3.png",
+          "assets/work/svs-graphics/nyuvc-case-competition1.png",
+          "assets/work/svs-graphics/nyuvc-case-competition2.png",
+          "assets/work/svs-graphics/general-meeting.png",
+          "assets/work/svs-graphics/general-meeting2.png",
+          "assets/work/svs-graphics/general-meeting3.png",
+          "assets/work/svs-graphics/general-meeting4.png",
+          "assets/work/svs-graphics/general-meeting5.png",
+          "assets/work/svs-graphics/general-meeting6.png"
         ]
       },
       {
         "id": "sustainability",
-        "img": "assets/work/sustainability.jpg",
+        "img": "assets/work/sustainability/olympic-sustainability-cover.png",
         "title": "Sustainability Proposal",
         "year": "2020",
         "tag": "Writing",
@@ -550,7 +597,7 @@
           "The piece examined how host cities have historically struggled with post-Games infrastructure costs and environmental footprint, and proposed a framework for evaluating future bids through a sustainability lens."
         ],
         "images": [
-          "assets/work/sustainability.jpg"
+          "assets/work/sustainability/olympic-sustainability-cover.png"
         ]
       }
     ]

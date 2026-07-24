@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project — Alex Hu</title>
+<title>Project · Alex Hu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <script src="nav.js"></script>
 </head>
@@ -61,7 +62,7 @@ if (!id) {
 
     if (!item) { window.location.href = 'work.html'; return; }
 
-    document.title = `${item.title} — Alex Hu`;
+    document.title = `${item.title} · Alex Hu`;
 
     const c = document.getElementById('content');
     document.getElementById('loading').remove();
@@ -94,7 +95,19 @@ if (!id) {
     h1.textContent = item.title;
     c.appendChild(h1);
 
-    // Hero — video loop takes priority over static image
+    // Top CTA: external link, shown up front so it's not missed
+    if (item.link && item.link !== '#' && item.id !== 'svs-graphics') {
+      const topLinkWrap = document.createElement('div');
+      topLinkWrap.classList.add('reveal');
+      topLinkWrap.style.cssText = 'margin-bottom:36px;';
+      const topA = document.createElement('a');
+      topA.href = item.link; topA.target = '_blank'; topA.className = 'link-cta';
+      topA.innerHTML = `${item.linkLabel ? item.linkLabel.replace(/\s*↗$/, '') : 'View project'} <span class="arrow">↗</span>`;
+      topLinkWrap.appendChild(topA);
+      c.appendChild(topLinkWrap);
+    }
+
+    // Hero: video loop takes priority over static image
     if (item.heroVideo) {
       const heroWrap = document.createElement('div');
       heroWrap.classList.add('reveal');
@@ -139,7 +152,7 @@ if (!id) {
     if (galleryItems.length) {
       const gallery = document.createElement('div');
       gallery.classList.add('reveal');
-      gallery.style.cssText = 'display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:48px;';
+      gallery.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:48px;';
       galleryItems.forEach(src => {
         const isVideo = src.match(/\.mp4$/i);
         const wrap = document.createElement('div');
@@ -147,14 +160,14 @@ if (!id) {
         if (isVideo) {
           const vid = document.createElement('video');
           vid.src = src; vid.autoplay = true; vid.loop = true; vid.muted = true; vid.playsInline = true;
-          vid.style.cssText = 'width:100%;display:block;';
+          vid.style.cssText = 'width:100%;aspect-ratio:1/1;object-fit:cover;display:block;';
           wrap.appendChild(vid);
         } else {
           wrap.style.cursor = 'zoom-in';
           wrap.addEventListener('click', () => openPhoto(src));
           const slot = document.createElement('div');
           slot.className = 'img-slot r6';
-          slot.style.cssText = 'width:100%;aspect-ratio:4/3;';
+          slot.style.cssText = 'width:100%;aspect-ratio:1/1;';
           const img = document.createElement('img');
           img.src = src; img.alt = '';
           img.onerror = () => { slot.innerHTML = '<div class="placeholder-label">Image</div>'; slot.classList.remove('has-image'); wrap.style.cursor='default'; };
@@ -164,18 +177,6 @@ if (!id) {
         gallery.appendChild(wrap);
       });
       c.appendChild(gallery);
-    }
-
-    // External link
-    if (item.link && item.link !== '#') {
-      const divider = document.createElement('div');
-      divider.style.cssText = 'border-top:1px solid #E2DBCC;padding-top:32px;margin-bottom:0;';
-      const a = document.createElement('a');
-      a.href = item.link; a.target = '_blank'; a.className = 'work-link';
-      a.style.cssText = "font-family:'JetBrains Mono',monospace;font-size:13px;color:#1B1714;text-decoration:none;";
-      a.textContent = item.linkLabel || 'View project ↗';
-      divider.appendChild(a);
-      c.appendChild(divider);
     }
   });
 }

@@ -6,44 +6,217 @@
 <title>Alex Hu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <script src="nav.js"></script>
 </head>
 <body>
 <div style="font-family: 'Hanken Grotesk', sans-serif; min-height: 100vh;">
 
-  <nav style="padding: 34px 40px 6px; display: flex; justify-content: center;">
-    <div style="display: flex; align-items: center; gap: 30px;">
-      <a href="index.html" class="nav-icon active" title="Home" aria-label="Home" style="display:flex;color:#1B1714;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></a>
-      <a href="photos.html" class="nav-icon" title="Photos" aria-label="Photos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5a1.5 1.5 0 0 1 1.5-1.5h2l1-2h7l1 2h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg></a>
-      <a href="videos.html" class="nav-icon" title="Videos" aria-label="Videos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="12" height="10" rx="1.5"/><path d="M15 10.5 20.5 7.5a.6.6 0 0 1 .9.5v8a.6.6 0 0 1-.9.5L15 13.5"/></svg></a>
-      <a href="work.html" class="nav-icon" title="Work" aria-label="Work" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="11" rx="1.5"/><path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M3 13h18"/></svg></a>
-      <a href="about.html" class="nav-icon" title="About" aria-label="About" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 19.5c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></a>
-    </div>
-  </nav>
+  <section class="hero-section">
+  <div class="hero">
 
-  <header style="max-width: 600px; margin: 0 auto; padding: 92px 24px 80px; position: relative;">
-    <div style="margin-bottom: 24px;">
-      <button id="status-btn" class="status-btn">
-        <span id="status-dot" style="width:9px;height:9px;border-radius:999px;background:#6f9c6a;animation:dotPulse 2.2s infinite;flex:none;"></span>
-        <span id="status-text" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#6a635a;"></span>
-        <span class="arrow" style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;color:#897F70;line-height:1;">↻</span>
-      </button>
-    </div>
-    <div id="fly-container" style="position:relative;pointer-events:none;height:0;overflow:visible;"></div>
-    <h1 class="reveal" style="font-family:'Newsreader',serif;font-weight:400;font-size:52px;line-height:1.05;letter-spacing:-0.015em;margin:0;color:#1B1714;position:relative;z-index:1;transition-delay:0.1s;">Hi, I'm Alex <span id="slot-emoji" style="display:inline-block;opacity:0;"></span></h1>
-    <p class="reveal" style="font-family:'Newsreader',serif;font-size:21px;line-height:1.55;color:#4f4942;margin:28px 0 18px;transition-delay:0.1s;">I'm a product manager in New York who enjoys <a href="photos.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">photography</a>, <a href="videos.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">making videos</a> &amp; tinkering with various <a href="work.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">creative projects</a>.</p>
-    <p class="reveal" style="font-family:'Newsreader',serif;font-size:18px;line-height:1.6;color:#6a635a;margin:0 0 30px;transition-delay:0.1s;">This little corner of the internet is where all of it lives. Have a look around.</p>
-    <div class="reveal" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:#9a917f;transition-delay:0.1s;">Based in New York 🗽&nbsp;&nbsp;/&nbsp;&nbsp;Born in Markham, ON 🍁</div>
-  </header>
+    <input type="checkbox" id="k-city" class="city-toggle-input">
+    <input type="checkbox" id="hero-menu-toggle" class="city-toggle-input">
 
-  <section style="max-width:960px;margin:0 auto;padding:0 40px;">
+    <div class="hero-map-wrap">
+      <svg class="k-map" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="k-fade" x1="0" y1="1" x2="0.55" y2="0.15">
+            <stop offset="0" stop-color="#FEF4E0" stop-opacity="0.96"/>
+            <stop offset="0.5" stop-color="#FEF4E0" stop-opacity="0.7"/>
+            <stop offset="1" stop-color="#FEF4E0" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- ── NYC ────────────────────────────────────────── -->
+        <g id="k-nycMap">
+          <g class="k-line" id="k1-7" data-stations="[{&quot;n&quot;: &quot;Court Sq&quot;, &quot;l&quot;: &quot;7&quot;, &quot;d&quot;: &quot;Mahjong&quot;, &quot;x&quot;: 900, &quot;y&quot;: 70, &quot;c&quot;: &quot;#B933AD&quot;}]">
+            <path id="k-7" class="k-track" d="M -20 190 L 520 190 L 700 70 L 1240 70" fill="none" stroke="#B933AD" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M -20 190 L 520 190 L 700 70 L 1240 70" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5" y="-2.5" width="10" height="5" rx="2.5" fill="#B933AD" class="k-train" pointer-events="none"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#k-7"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="k1-L" data-stations="[{&quot;n&quot;: &quot;McCarren Park&quot;, &quot;l&quot;: &quot;L&quot;, &quot;d&quot;: &quot;Frisbee&quot;, &quot;x&quot;: 950, &quot;y&quot;: 330, &quot;c&quot;: &quot;#A7A9AC&quot;}]">
+            <path id="k-L" class="k-track" d="M -20 330 L 1240 330" fill="none" stroke="#A7A9AC" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M -20 330 L 1240 330" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5" y="-2.5" width="10" height="5" rx="2.5" fill="#808184" class="k-train" pointer-events="none"><animateMotion dur="8s" repeatCount="indefinite" rotate="auto"><mpath href="#k-L"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="k1-6" data-stations="[{&quot;n&quot;: &quot;33 St&quot;, &quot;l&quot;: &quot;6&quot;, &quot;d&quot;: &quot;Apartment&quot;, &quot;x&quot;: 880, &quot;y&quot;: 200, &quot;c&quot;: &quot;#00933C&quot;}, {&quot;n&quot;: &quot;23 St&quot;, &quot;l&quot;: &quot;6&quot;, &quot;d&quot;: &quot;Office&quot;, &quot;x&quot;: 910, &quot;y&quot;: 430, &quot;c&quot;: &quot;#00933C&quot;}]">
+            <path id="k-6" class="k-track" d="M 880 -20 L 880 250 L 910 285 L 910 750" fill="none" stroke="#00933C" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 880 -20 L 880 250 L 910 285 L 910 750" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5" y="-2.5" width="10" height="5" rx="2.5" fill="#00933C" class="k-train" pointer-events="none"><animateMotion dur="8.5s" repeatCount="indefinite" rotate="auto"><mpath href="#k-6"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="k1-E" data-stations="[{&quot;n&quot;: &quot;W 4 St&quot;, &quot;l&quot;: &quot;E&quot;, &quot;d&quot;: &quot;NYU&quot;, &quot;x&quot;: 660, &quot;y&quot;: 430, &quot;c&quot;: &quot;#0039A6&quot;}]">
+            <path id="k-E" class="k-track" d="M 1240 240 L 720 240 L 660 300 L 660 750" fill="none" stroke="#0039A6" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 1240 240 L 720 240 L 660 300 L 660 750" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5" y="-2.5" width="10" height="5" rx="2.5" fill="#0039A6" class="k-train" pointer-events="none"><animateMotion dur="7.4s" repeatCount="indefinite" rotate="auto"><mpath href="#k-E"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="k1-Q" data-stations="[{&quot;n&quot;: &quot;Herald Sq&quot;, &quot;l&quot;: &quot;Q&quot;, &quot;d&quot;: &quot;HeyTea&quot;, &quot;x&quot;: 780, &quot;y&quot;: 250, &quot;c&quot;: &quot;#E0B400&quot;}]">
+            <path id="k-Q" class="k-track" d="M 780 -20 L 780 380 L 1000 600 L 1000 750" fill="none" stroke="#E0B400" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 780 -20 L 780 380 L 1000 600 L 1000 750" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5" y="-2.5" width="10" height="5" rx="2.5" fill="#E0B400" class="k-train" pointer-events="none"><animateMotion dur="7.8s" repeatCount="indefinite" rotate="auto"><mpath href="#k-Q"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="k1-M" data-stations="[{&quot;n&quot;: &quot;Qboro Plz&quot;, &quot;l&quot;: &quot;M&quot;, &quot;d&quot;: &quot;Softball&quot;, &quot;x&quot;: 920, &quot;y&quot;: 190, &quot;c&quot;: &quot;#FF6319&quot;}]">
+            <path id="k-M" class="k-track" d="M 1240 190 L 720 190 L 690 230 L 690 750" fill="none" stroke="#FF6319" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 1240 190 L 720 190 L 690 230 L 690 750" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5" y="-2.5" width="10" height="5" rx="2.5" fill="#FF6319" class="k-train" pointer-events="none"><animateMotion dur="8.2s" repeatCount="indefinite" rotate="auto"><mpath href="#k-M"/></animateMotion></rect>
+          </g>
+        </g>
+
+        <!-- ── Toronto ────────────────────────────────────── -->
+        <g id="k-torMap">
+          <g class="k-line" id="kt-sc" data-stations="[{&quot;n&quot;: &quot;Kensington Mkt&quot;, &quot;l&quot;: &quot;505&quot;, &quot;d&quot;: &quot;Weekend wander&quot;, &quot;x&quot;: 380, &quot;y&quot;: 300, &quot;c&quot;: &quot;#D9341F&quot;}, {&quot;n&quot;: &quot;Trinity Bellwoods&quot;, &quot;l&quot;: &quot;501&quot;, &quot;d&quot;: &quot;Picnics in the park&quot;, &quot;x&quot;: 250, &quot;y&quot;: 300, &quot;c&quot;: &quot;#D9341F&quot;}]" opacity="0.85">
+            <path id="ktr-sc1" d="M -20 300 L 560 300 L 600 340 L 1220 340" fill="none" stroke="#D9341F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 7"/>
+            <path id="ktr-sc2" d="M 900 -20 L 900 600" fill="none" stroke="#D9341F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 7"/>
+            <path id="ktr-sc3" d="M 1070 -20 L 1070 600" fill="none" stroke="#D9341F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 7"/>
+            <path id="ktr-sc4" d="M 640 -20 L 640 600" fill="none" stroke="#D9341F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 7"/>
+            <path d="M -20 300 L 560 300 L 600 340 L 1220 340" fill="none" stroke="transparent" stroke-width="22" stroke-linecap="round"/>
+            <path d="M 900 -20 L 900 600" fill="none" stroke="transparent" stroke-width="22" stroke-linecap="round"/>
+            <path d="M 1070 -20 L 1070 600" fill="none" stroke="transparent" stroke-width="22" stroke-linecap="round"/>
+            <path d="M 640 -20 L 640 600" fill="none" stroke="transparent" stroke-width="22" stroke-linecap="round"/>
+            <rect x="-4.5" y="-2" width="9" height="4" rx="2" fill="#D9341F" class="k-train" pointer-events="none"><animateMotion dur="15s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-sc1"/></animateMotion></rect>
+            <rect x="-4.5" y="-2" width="9" height="4" rx="2" fill="#D9341F" class="k-train" pointer-events="none"><animateMotion dur="13s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-sc2"/></animateMotion></rect>
+            <rect x="-4.5" y="-2" width="9" height="4" rx="2" fill="#D9341F" class="k-train" pointer-events="none"><animateMotion dur="14s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-sc3"/></animateMotion></rect>
+            <rect x="-4.5" y="-2" width="9" height="4" rx="2" fill="#D9341F" class="k-train" pointer-events="none"><animateMotion dur="12s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-sc4"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="kt-2" data-stations="[{&quot;n&quot;: &quot;Woodbine&quot;, &quot;l&quot;: &quot;2&quot;, &quot;d&quot;: &quot;Woodbine Beach&quot;, &quot;x&quot;: 1000, &quot;y&quot;: 250, &quot;c&quot;: &quot;#00923F&quot;}]">
+            <path id="ktr-2" class="k-track" d="M -20 250 L 1220 250" fill="none" stroke="#00923F" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M -20 250 L 1220 250" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5.5" y="-3" width="11" height="6" rx="3" fill="#00923F" class="k-train" pointer-events="none"><animateMotion dur="9s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-2"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="kt-5" data-stations="[{&quot;n&quot;: &quot;Aga Khan&quot;, &quot;l&quot;: &quot;5&quot;, &quot;d&quot;: &quot;Aga Khan Museum&quot;, &quot;x&quot;: 1015, &quot;y&quot;: 170, &quot;c&quot;: &quot;#F45D1C&quot;}]">
+            <path id="ktr-5" class="k-track" d="M -20 170 L 1220 170" fill="none" stroke="#F45D1C" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M -20 170 L 1220 170" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5.5" y="-3" width="11" height="6" rx="3" fill="#F45D1C" class="k-train" pointer-events="none"><animateMotion dur="9.5s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-5"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="kt-4" data-stations="[{&quot;n&quot;: &quot;Don Mills&quot;, &quot;l&quot;: &quot;4&quot;, &quot;d&quot;: &quot;Home station&quot;, &quot;x&quot;: 1010, &quot;y&quot;: 90, &quot;c&quot;: &quot;#B32078&quot;}]">
+            <path id="ktr-4" class="k-track" d="M 1220 90 L 830 90" fill="none" stroke="#B32078" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 1220 90 L 830 90" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5.5" y="-3" width="11" height="6" rx="3" fill="#B32078" class="k-train" pointer-events="none"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-4"/></animateMotion></rect>
+          </g>
+          <g class="k-line" id="kt-1" data-stations="[{&quot;n&quot;: &quot;St Patrick&quot;, &quot;l&quot;: &quot;1&quot;, &quot;d&quot;: &quot;Juicy Dumpling&quot;, &quot;x&quot;: 700, &quot;y&quot;: 355, &quot;c&quot;: &quot;#F8C300&quot;}, {&quot;n&quot;: &quot;Queen&quot;, &quot;l&quot;: &quot;1&quot;, &quot;d&quot;: &quot;Eaton Centre&quot;, &quot;x&quot;: 830, &quot;y&quot;: 340, &quot;c&quot;: &quot;#F8C300&quot;}, {&quot;n&quot;: &quot;Union&quot;, &quot;l&quot;: &quot;1&quot;, &quot;d&quot;: &quot;Blue Jays @ Rogers Centre&quot;, &quot;x&quot;: 765, &quot;y&quot;: 448, &quot;c&quot;: &quot;#F8C300&quot;}]">
+            <path id="ktr-1" class="k-track" d="M 430 -20 L 430 40 L 540 130 L 600 200 L 700 320 L 700 415 L 735 448 L 795 448 L 830 415 L 830 40 L 830 -20" fill="none" stroke="#F8C300" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 430 -20 L 430 40 L 540 130 L 600 200 L 700 320 L 700 415 L 735 448 L 795 448 L 830 415 L 830 40 L 830 -20" fill="none" stroke="transparent" stroke-width="30" stroke-linecap="round"/>
+            <rect x="-5.5" y="-3" width="11" height="6" rx="3" fill="#F8C300" class="k-train" pointer-events="none"><animateMotion dur="12s" repeatCount="indefinite" rotate="auto"><mpath href="#ktr-1"/></animateMotion></rect>
+          </g>
+        </g>
+
+        <rect class="k-fade" x="0" y="300" width="1200" height="260" fill="url(#k-fade)" pointer-events="none"/>
+
+        <!-- ── NYC stops ──────────────────────────────────── -->
+        <g id="k-nycStops" class="k-stops-layer" pointer-events="none">
+          <g id="ks-7" class="k-stopgrp">
+            <circle cx="900" cy="70" r="10" fill="none" stroke="#B933AD" stroke-width="2.5" opacity="0.5" style="transform-origin:900px 70px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="900" cy="70" r="6" fill="#FEF4E0" stroke="#B933AD" stroke-width="3"/>
+          </g>
+          <g id="ks-L" class="k-stopgrp">
+            <circle cx="950" cy="330" r="10" fill="none" stroke="#A7A9AC" stroke-width="2.5" opacity="0.5" style="transform-origin:950px 330px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="950" cy="330" r="6" fill="#FEF4E0" stroke="#A7A9AC" stroke-width="3"/>
+          </g>
+          <g id="ks-6" class="k-stopgrp">
+            <circle cx="880" cy="200" r="10" fill="none" stroke="#00933C" stroke-width="2.5" opacity="0.5" style="transform-origin:880px 200px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="880" cy="200" r="6" fill="#FEF4E0" stroke="#00933C" stroke-width="3"/>
+            <circle cx="910" cy="430" r="10" fill="none" stroke="#00933C" stroke-width="2.5" opacity="0.5" style="transform-origin:910px 430px;animation:pingPulse 1.8s ease-out infinite;animation-delay:.5s;"/>
+            <circle cx="910" cy="430" r="6" fill="#FEF4E0" stroke="#00933C" stroke-width="3"/>
+          </g>
+          <g id="ks-E" class="k-stopgrp">
+            <circle cx="660" cy="430" r="10" fill="none" stroke="#0039A6" stroke-width="2.5" opacity="0.5" style="transform-origin:660px 430px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="660" cy="430" r="6" fill="#FEF4E0" stroke="#0039A6" stroke-width="3"/>
+          </g>
+          <g id="ks-Q" class="k-stopgrp">
+            <circle cx="780" cy="250" r="10" fill="none" stroke="#E0B400" stroke-width="2.5" opacity="0.5" style="transform-origin:780px 250px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="780" cy="250" r="6" fill="#FEF4E0" stroke="#E0B400" stroke-width="3"/>
+          </g>
+          <g id="ks-M" class="k-stopgrp">
+            <circle cx="920" cy="190" r="10" fill="none" stroke="#FF6319" stroke-width="2.5" opacity="0.5" style="transform-origin:920px 190px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="920" cy="190" r="6" fill="#FEF4E0" stroke="#FF6319" stroke-width="3"/>
+          </g>
+        </g>
+
+        <!-- ── Toronto stops ──────────────────────────────── -->
+        <g id="k-torStops" pointer-events="none">
+          <g id="kts-sc" class="k-stopgrp">
+            <circle cx="380" cy="300" r="10" fill="none" stroke="#D9341F" stroke-width="2.5" opacity="0.5" style="transform-origin:380px 300px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="380" cy="300" r="6" fill="#FEF4E0" stroke="#D9341F" stroke-width="3"/>
+            <circle cx="250" cy="300" r="10" fill="none" stroke="#D9341F" stroke-width="2.5" opacity="0.5" style="transform-origin:250px 300px;animation:pingPulse 1.8s ease-out infinite;animation-delay:.4s;"/>
+            <circle cx="250" cy="300" r="6" fill="#FEF4E0" stroke="#D9341F" stroke-width="3"/>
+          </g>
+          <g id="kts-1" class="k-stopgrp">
+            <circle cx="700" cy="355" r="10" fill="none" stroke="#F8C300" stroke-width="2.5" opacity="0.5" style="transform-origin:700px 355px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="700" cy="355" r="6" fill="#FEF4E0" stroke="#F8C300" stroke-width="3"/>
+            <circle cx="830" cy="340" r="10" fill="none" stroke="#F8C300" stroke-width="2.5" opacity="0.5" style="transform-origin:830px 340px;animation:pingPulse 1.8s ease-out infinite;animation-delay:.3s;"/>
+            <circle cx="830" cy="340" r="6" fill="#FEF4E0" stroke="#F8C300" stroke-width="3"/>
+            <circle cx="765" cy="448" r="10" fill="none" stroke="#F8C300" stroke-width="2.5" opacity="0.5" style="transform-origin:765px 448px;animation:pingPulse 1.8s ease-out infinite;animation-delay:.6s;"/>
+            <circle cx="765" cy="448" r="6" fill="#FEF4E0" stroke="#F8C300" stroke-width="3"/>
+          </g>
+          <g id="kts-2" class="k-stopgrp">
+            <circle cx="1000" cy="250" r="10" fill="none" stroke="#00923F" stroke-width="2.5" opacity="0.5" style="transform-origin:1000px 250px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="1000" cy="250" r="6" fill="#FEF4E0" stroke="#00923F" stroke-width="3"/>
+          </g>
+          <g id="kts-5" class="k-stopgrp">
+            <circle cx="1015" cy="170" r="10" fill="none" stroke="#F45D1C" stroke-width="2.5" opacity="0.5" style="transform-origin:1015px 170px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="1015" cy="170" r="6" fill="#FEF4E0" stroke="#F45D1C" stroke-width="3"/>
+          </g>
+          <g id="kts-4" class="k-stopgrp">
+            <circle cx="1010" cy="90" r="10" fill="none" stroke="#B32078" stroke-width="2.5" opacity="0.5" style="transform-origin:1010px 90px;animation:pingPulse 1.8s ease-out infinite;"/>
+            <circle cx="1010" cy="90" r="6" fill="#FEF4E0" stroke="#B32078" stroke-width="3"/>
+          </g>
+        </g>
+      </svg>
+      <div id="station-chip-layer" class="station-chip-layer"></div>
+    </div>
+
+    <div class="hero-topbar">
+      <div class="hero-topbar-spacer" aria-hidden="true"></div>
+      <nav class="hero-nav">
+        <a href="index.html" class="nav-icon active" title="Home" aria-label="Home" style="display:flex;color:#1B1714;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></a>
+        <a href="photos.html" class="nav-icon" title="Photos" aria-label="Photos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5a1.5 1.5 0 0 1 1.5-1.5h2l1-2h7l1 2h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg></a>
+        <a href="videos.html" class="nav-icon" title="Videos" aria-label="Videos" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="12" height="10" rx="1.5"/><path d="M15 10.5 20.5 7.5a.6.6 0 0 1 .9.5v8a.6.6 0 0 1-.9.5L15 13.5"/></svg></a>
+        <a href="work.html" class="nav-icon" title="Work" aria-label="Work" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="11" rx="1.5"/><path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M3 13h18"/></svg></a>
+        <a href="about.html" class="nav-icon" title="About" aria-label="About" style="display:flex;color:#897F70;text-decoration:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 19.5c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></a>
+      </nav>
+      <label for="k-city" class="city-toggle hero-city-toggle">
+        <span class="lbl-nyc">NYC</span>
+        <span class="toggle-divider"></span>
+        <span class="lbl-tor">TOR</span>
+      </label>
+      <label for="hero-menu-toggle" class="hero-menu-btn" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </label>
+    </div>
+
+    <label for="hero-menu-toggle" class="hero-menu-backdrop" aria-hidden="true"></label>
+    <nav class="hero-mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="photos.html">Photos</a>
+      <a href="videos.html">Videos</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-intro" id="hero-intro">
+        <h1>Alex Hu</h1>
+        <p>I'm a product manager based in New York, from Toronto who enjoys <a href="photos.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;pointer-events:auto;">photography</a>, <a href="videos.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;pointer-events:auto;">making videos</a> &amp; tinkering with various <a href="work.html" class="prose-link" style="color:#1B1714;font-style:italic;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;pointer-events:auto;">creative projects</a>.</p>
+        <p class="hero-hint">↳ Hover a subway line to see where it takes me</p>
+      </div>
+
+      <a href="#after-hero" class="hero-scroll-cue" aria-label="Scroll for more">
+        <span>Scroll for More</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </div>
+
+  </div>
+  </section>
+
+  <section id="after-hero" style="max-width:960px;margin:0 auto;padding:0 40px;">
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:26px 0 20px;border-top:1px solid #E2DBCC;">
       <div style="display:flex;gap:18px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">01 — Photography</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">01 · Photography</span>
         <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#cabf9f;">/</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">02 — Video</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">02 · Video</span>
       </div>
       <div style="display:flex;gap:20px;">
         <a href="photos.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">Photos →</a>
@@ -57,10 +230,10 @@
 
   <section style="max-width:960px;margin:0 auto;padding:0 40px;">
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:32px 0 20px;">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">03 — Work &amp; Projects</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">03 · Work &amp; Projects</span>
       <a href="work.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">See all →</a>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#b0a288;margin-bottom:16px;">Selected — Coinbase Developer Platform</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#b0a288;margin-bottom:16px;">Selected · Coinbase Developer Platform</div>
     <div id="work-grid" class="work-grid-2" style="display:grid;grid-template-columns:1fr;gap:64px;margin-bottom:40px;"></div>
   </section>
 
@@ -73,7 +246,7 @@
         <a href="mailto:alexhu.ont@gmail.com" class="footer-link" style="color:#1B1714;text-decoration:none;">alexhu.ont@gmail.com</a>
       </div>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b3a997;margin-top:40px;">© 2026 Alex Hu — Built from scratch in New York.</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b3a997;margin-top:40px;">© 2026 Alex Hu · Built from scratch in New York.</div>
   </footer>
 
 </div>
@@ -85,52 +258,130 @@
 </div>
 
 <script>
-// ── STATUS BADGE ──────────────────────────────────────────────
-const statuses = [
-  { text:'Waving hello',            emoji:'👋', kind:'wave' },
-  { text:'On the subway',           emoji:'🚄', kind:'train' },
-  { text:'Somewhere with a camera', emoji:'📸', kind:'camera' },
-  { text:'Between meetings',        emoji:'💻', kind:'laptop' },
-  { text:'Watching the Blue Jays',  emoji:'⚾', kind:'ball' },
-  { text:'Playing frisbee',         emoji:'🥏', kind:'frisbee' },
-  { text:'Laughing like Kawhi',     emoji:'🏀', kind:'basketball' },
-];
-function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-let order=shuffle(statuses),idx=0,ghostPlaying=false;
-const statusText=document.getElementById('status-text');
-const slotEmoji=document.getElementById('slot-emoji');
-const flyC=document.getElementById('fly-container');
-const traveling={train:true,ball:true,frisbee:true};
-const dur={ball:1300,frisbee:850,train:1200};
+// ── MOBILE MAP PAN ───────────────────────────────────────────────
+(function(){
+  const svg = document.querySelector('.k-map');
+  const cityToggle = document.getElementById('k-city');
+  const mq = window.matchMedia('(max-width: 700px)');
+  function applyViewBox(){
+    if(!mq.matches){ svg.setAttribute('viewBox', '0 0 1200 560'); return; }
+    svg.setAttribute('viewBox', cityToggle.checked ? '80 20 1200 460' : '80 -20 1200 560');
+  }
+  applyViewBox();
+  mq.addEventListener('change', applyViewBox);
+  cityToggle.addEventListener('change', applyViewBox);
+})();
 
-function spawnGhost(e){
-  const g=document.createElement('span');
-  g.textContent=e.emoji;
-  const css={ball:'position:absolute;font-size:46px;left:296px;top:10px;pointer-events:none;animation:ballHit 1.3s linear forwards;',
-              frisbee:'position:absolute;font-size:54px;left:296px;top:10px;pointer-events:none;animation:frisbeeFly 0.85s ease-in forwards;',
-              train:'position:absolute;font-size:46px;left:296px;top:10px;pointer-events:none;animation:trainDash 1.2s cubic-bezier(.4,0,1,1) forwards;'}[e.kind];
-  g.style.cssText=css;flyC.appendChild(g);setTimeout(()=>g.remove(),(dur[e.kind]||1300)+100);
-}
-function spawnFlash(){
-  const f=document.createElement('span');
-  f.style.cssText='position:absolute;left:236px;top:80px;width:160px;height:160px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(255,255,255,0.95),rgba(255,255,255,0));z-index:3;animation:flashPulse 1.5s ease-out forwards;';
-  flyC.appendChild(f);setTimeout(()=>f.remove(),1600);
-}
-function applyEntry(e){
-  statusText.textContent=e.text;slotEmoji.textContent=e.emoji;
-  if(traveling[e.kind]){
-    slotEmoji.style.cssText='display:inline-block;opacity:0;';ghostPlaying=true;spawnGhost(e);
-    setTimeout(()=>{ghostPlaying=false;slotEmoji.style.cssText='display:inline-block;opacity:1;animation:popIn 0.5s cubic-bezier(.34,1.56,.64,1) forwards;';},dur[e.kind]);
-  }else if(e.kind==='wave'){slotEmoji.style.cssText='display:inline-block;transform-origin:70% 70%;animation:waveWiggle 1.5s ease-in-out forwards;';
-  }else if(e.kind==='camera'){slotEmoji.style.cssText='display:inline-block;transform-origin:50% 50%;animation:cameraPop 1.5s ease-out forwards;';spawnFlash();
-  }else if(e.kind==='laptop'){slotEmoji.style.cssText='display:inline-block;transform-origin:50% 100%;animation:laptopOpen 1.2s ease-out forwards;';
-  }else if(e.kind==='basketball'){slotEmoji.style.cssText='display:inline-block;transform-origin:50% 100%;animation:basketballBounce 1.3s ease-out forwards;';
-  }else{slotEmoji.style.cssText='display:inline-block;';}
-}
-setTimeout(() => applyEntry(order[0]), 700);
-document.getElementById('status-btn').addEventListener('click',()=>{
-  if(ghostPlaying)return;idx=(idx+1)%order.length;if(idx===0)order=shuffle(statuses);applyEntry(order[idx]);
-});
+// ── HOVER/TAP-TO-REVEAL STATIONS (clip-safe on any screen size) ──
+(function(){
+  const layer = document.getElementById('station-chip-layer');
+  const map = document.querySelector('.k-map');
+  const wrap = document.querySelector('.hero-map-wrap');
+  let activeLine = null;
+  let activeChips = [];
+
+  function svgToLocal(px, py){
+    const vb = map.viewBox.baseVal;
+    const svgRect = map.getBoundingClientRect();
+    const wrapRect = wrap.getBoundingClientRect();
+    const scale = Math.max(svgRect.width / vb.width, svgRect.height / vb.height);
+    const screenX = svgRect.left + (px - vb.x) * scale - (vb.width * scale - svgRect.width) / 2;
+    const screenY = svgRect.top + (py - vb.y) * scale - (vb.height * scale - svgRect.height) / 2;
+    return { x: screenX - wrapRect.left, y: screenY - wrapRect.top, wrapRect };
+  }
+
+  function clearChips(){
+    activeChips.forEach(c => c.remove());
+    activeChips = [];
+  }
+
+  function showFor(line){
+    let stops;
+    try { stops = JSON.parse(line.dataset.stations || '[]'); } catch(e) { stops = []; }
+    if(!stops.length) return;
+    clearChips();
+
+    stops.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'station-chip';
+      const label = document.createElement('span');
+      label.className = 'chip-label';
+      label.textContent = s.n + ' · ' + s.l;
+      const desc = document.createElement('span');
+      desc.className = 'chip-desc';
+      desc.textContent = s.d;
+      card.appendChild(label);
+      card.appendChild(desc);
+      layer.appendChild(card);
+
+      const pos = svgToLocal(s.x, s.y);
+      card.classList.add('visible');
+      const cw = card.offsetWidth, ch = card.offsetHeight;
+      const margin = 10;
+      let left = pos.x - cw / 2;
+      let top = pos.y - ch - 18;
+      left = Math.min(Math.max(left, margin), pos.wrapRect.width - cw - margin);
+      top = Math.min(Math.max(top, margin), pos.wrapRect.height - ch - margin);
+      card.style.left = left + 'px';
+      card.style.top = top + 'px';
+      activeChips.push(card);
+    });
+    activeLine = line;
+  }
+  function hide(line){
+    if(line && activeLine !== line) return;
+    clearChips();
+    activeLine = null;
+  }
+
+  document.querySelectorAll('.k-line').forEach(line => {
+    line.addEventListener('mouseenter', () => showFor(line));
+    line.addEventListener('mouseleave', () => hide(line));
+    line.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if(activeLine === line){ hide(line); } else { showFor(line); }
+    });
+  });
+  map.addEventListener('click', () => hide());
+})();
+
+// ── SUBWAY MAP LINE-DRAW ────────────────────────────────────────
+(function(){
+  const cityToggle = document.getElementById('k-city');
+  const nycMap = document.getElementById('k-nycMap');
+  const torMap = document.getElementById('k-torMap');
+  const DUR = 1900, STEP = 190;
+  let timers = [];
+
+  function playDraw(mapEl){
+    if(!mapEl) return;
+    timers.forEach(clearTimeout);
+    timers = [];
+    mapEl.querySelectorAll('.k-line').forEach((line, i) => {
+      const track = line.querySelector('.k-track');
+      const train = line.querySelector('.k-train');
+      if(!track) return;
+      const delay = i * STEP;
+      if(track._drawAnim) track._drawAnim.cancel();
+      track._drawAnim = track.animate(
+        [{ strokeDashoffset: 2000 }, { strokeDashoffset: 0 }],
+        { duration: DUR, delay, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' }
+      );
+      if(train){
+        train.style.opacity = '0';
+        timers.push(setTimeout(() => { train.style.opacity = '1'; }, delay + DUR));
+      }
+    });
+  }
+
+  function playActive(){ playDraw(cityToggle.checked ? torMap : nycMap); }
+
+  cityToggle.addEventListener('change', playActive);
+  playActive();
+
+  const introDelay = (nycMap.querySelectorAll('.k-line').length - 1) * STEP + DUR;
+  setTimeout(() => { document.getElementById('hero-intro').classList.add('visible'); }, introDelay);
+})();
 
 // ── LIGHTBOX ─────────────────────────────────────────────────
 function openPhoto(src){

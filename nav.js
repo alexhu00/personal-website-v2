@@ -1,4 +1,4 @@
-// Scroll reveal — watches for .reveal elements added dynamically
+// Scroll reveal: watches for .reveal elements added dynamically
 (function setupReveal() {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {

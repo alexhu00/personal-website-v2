@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Work — Alex Hu</title>
+<title>Work · Alex Hu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <script src="nav.js"></script>
 </head>
@@ -24,13 +25,13 @@
   </nav>
 
   <header style="max-width:1040px;margin:0 auto;padding:84px 40px 40px;">
-    <div class="reveal" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;margin-bottom:18px;transition-delay:0.1s;">03 — Work &amp; Projects</div>
-    <h1 class="reveal" style="font-family:'Newsreader',serif;font-weight:400;font-size:56px;line-height:1.04;letter-spacing:-0.02em;margin:0;color:#1B1714;transition-delay:0.1s;">Work &amp; Projects</h1>
-    <p class="reveal" style="font-family:'Newsreader',serif;font-size:20px;line-height:1.55;color:#5a544c;max-width:540px;margin:22px 0 0;transition-delay:0.1s;">By day I'm a product manager. I like the messy middle between users, design, and what's actually buildable. On the side I make things: jersey designs, marketing graphics, the occasional bit of writing.</p>
+    <div class="reveal" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;margin-bottom:18px;transition-delay:0.1s;">03 · Work &amp; Projects</div>
+    <h1 class="reveal" style="font-family:'Newsreader',serif;font-weight:400;font-size:38px;line-height:1.1;letter-spacing:-0.02em;margin:0;color:#1B1714;transition-delay:0.1s;">Work &amp; Projects</h1>
+    <p class="reveal" style="font-family:'Newsreader',serif;font-size:15px;line-height:1.55;color:#5a544c;max-width:480px;margin:16px 0 0;transition-delay:0.1s;">By day I'm a product manager. I like the messy middle between users, design, and what's actually buildable. On the side I make things: jersey designs, marketing graphics, the occasional bit of writing.</p>
   </header>
 
   <section style="max-width:1040px;margin:0 auto;padding:28px 40px 0;">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#aaa089;padding-bottom:22px;">Selected work — Coinbase Developer Platform</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#aaa089;padding-bottom:22px;">Selected work · Coinbase Developer Platform</div>
     <div id="selected-grid" class="work-grid-2" style="display:grid;grid-template-columns:1fr;gap:64px;"></div>
   </section>
 
@@ -48,7 +49,7 @@
         <a href="mailto:alexhu.ont@gmail.com" class="footer-link" style="color:#1B1714;text-decoration:none;">alexhu.ont@gmail.com</a>
       </div>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b3a997;margin-top:40px;">© 2026 Alex Hu — Built from scratch in New York.</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b3a997;margin-top:40px;">© 2026 Alex Hu · Built from scratch in New York.</div>
   </footer>
 
 </div>
@@ -76,12 +77,16 @@ fetch('content.json').then(r => r.json()).then(data => {
     const article = document.createElement('article');
     article.className = 'reveal';
     article.style.cursor = 'pointer';
-    article.addEventListener('click', () => { window.location.href = `project.html#${item.id}`; });
+    if (item.linkDirect && item.link && item.link !== '#') {
+      article.addEventListener('click', () => { window.open(item.link, '_blank'); });
+    } else {
+      article.addEventListener('click', () => { window.location.href = `project.html#${item.id}`; });
+    }
     article.innerHTML = `
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;text-transform:uppercase;color:#b0a288;margin-top:28px;">${item.tag}</div>
       <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:24px;margin:8px 0 0;color:#1B1714;">${item.title}</h3>
       <p style="font-family:'Newsreader',serif;font-size:16px;line-height:1.55;color:#6a635a;margin:10px 0 12px;">${item.description}</p>
-      <span class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#897F70;">Read more →</span>`;
+      <span class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#897F70;">${item.linkDirect ? (item.linkLabel || 'Read more ↗') : 'Read more →'}</span>`;
     if (item.heroVideo) {
       const vid = document.createElement('video');
       vid.src = item.heroVideo; vid.autoplay = true; vid.loop = true; vid.muted = true; vid.playsInline = true;
