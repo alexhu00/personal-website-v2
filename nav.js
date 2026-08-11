@@ -1,3 +1,20 @@
+// Theme: apply saved preference immediately (before paint) to avoid a flash
+(function initTheme() {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
 // Scroll reveal: watches for .reveal elements added dynamically
 (function setupReveal() {
   const io = new IntersectionObserver((entries) => {
