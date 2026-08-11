@@ -1,5 +1,9 @@
 *, *::before, *::after { box-sizing: border-box; }
 
+@font-face { font-family: 'PP NeueBit'; src: url('fonts/PPNeueBit-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'PP Mondwest'; src: url('fonts/PPMondwest-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'PolySans Trial'; src: url('fonts/PolySansTrial-Slim.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -466,28 +470,28 @@ a { transition: color .25s ease; }
 :root[data-theme="dark"] .mobile-tabbar a.active { color: #F0EBDD; }
 
 /* Site type system — PP Mondwest for lead-in/label copy, PP NeueBit for emphasis/titles, PolySans Trial (slim) for body */
-.ttl-lead { font-family: 'PP Mondwest', 'PPMondwest', 'PP Mondwest Regular', serif !important; font-weight: 400; letter-spacing: -0.03em; font-size: 50px; }
-.ttl-emph { font-family: 'PP NeueBit', 'PPNeueBit', 'PP Neue Bit', 'Pixelify Sans', monospace !important; font-weight: 700; letter-spacing: -0.05em; font-size: 70px; }
-header h1 { font-family: 'PP NeueBit', 'PPNeueBit', 'PP Neue Bit', 'Pixelify Sans', monospace !important; font-weight: 700 !important; letter-spacing: -0.01em !important; text-transform: lowercase; font-size: 64px !important; line-height: 1.02 !important; }
-.hero-intro p, .hero-hint, header p { font-family: 'PolySans Trial', 'PolySans Trial Slim', 'PolySans Slim Trial', 'Space Grotesk', sans-serif !important; font-weight: 300; letter-spacing: -0.04em !important; text-transform: lowercase; }
+.ttl-lead { font-family: 'PP Mondwest', serif !important; font-weight: 400; letter-spacing: -0.03em; font-size: 50px; }
+.ttl-emph { font-family: 'PP NeueBit', 'Pixelify Sans', monospace !important; font-weight: 700; letter-spacing: -0.05em; font-size: 70px; }
+header h1 { font-family: 'PP NeueBit', 'Pixelify Sans', monospace !important; font-weight: 700 !important; letter-spacing: -0.01em !important; text-transform: lowercase; font-size: 64px !important; line-height: 1.02 !important; }
+.hero-intro p, .hero-hint, header p { font-family: 'PolySans Trial', 'Space Grotesk', sans-serif !important; font-weight: 300; letter-spacing: -0.04em !important; text-transform: lowercase; }
 header p { font-size: 16px !important; line-height: 1.45 !important; max-width: 620px !important; margin-top: 10px !important; }
-header > div { font-family: 'PP Mondwest', 'PPMondwest', 'PP Mondwest Regular', serif !important; text-transform: lowercase !important; letter-spacing: 0 !important; font-size: 20px !important; margin-bottom: 8px !important; }
-.tab-btn { font-family: 'PolySans Trial', 'PolySans Trial Slim', 'PolySans Slim Trial', 'Space Grotesk', sans-serif !important; text-transform: lowercase; letter-spacing: 0; font-size: 16px; }
+header > div { font-family: 'PP Mondwest', serif !important; text-transform: lowercase !important; letter-spacing: 0 !important; font-size: 20px !important; margin-bottom: 8px !important; }
+.tab-btn { font-family: 'PolySans Trial', 'Space Grotesk', sans-serif !important; text-transform: lowercase; letter-spacing: 0; font-size: 16px; }
 header ~ div .tab-btn, div:has(> .tab-btn) { gap: 12px !important; }
 .tab-btn.inactive { border: 1px solid rgba(27,23,20,0.18); }
 .tab-btn.inactive:hover { background: rgba(27,23,20,0.06); border-color: rgba(27,23,20,0.3); }
 :root[data-theme="dark"] .tab-btn.inactive { border-color: rgba(180,200,180,0.25); }
 :root[data-theme="dark"] .tab-btn.inactive:hover { background: rgba(180,200,180,0.1); border-color: rgba(180,200,180,0.4); }
 
-[style*="Hanken Grotesk"] { font-family: 'PolySans Trial', 'PolySans Trial Slim', 'PolySans Slim Trial', 'Space Grotesk', sans-serif !important; }
-h1[style*="Newsreader"], h3[style*="Newsreader"] { font-family: 'PP NeueBit', 'PPNeueBit', 'PP Neue Bit', 'Pixelify Sans', monospace !important; font-weight: 700 !important; letter-spacing: -0.01em !important; text-transform: lowercase !important; }
+[style*="Hanken Grotesk"] { font-family: 'PolySans Trial', 'Space Grotesk', sans-serif !important; }
+h1[style*="Newsreader"], h3[style*="Newsreader"] { font-family: 'PP NeueBit', 'Pixelify Sans', monospace !important; font-weight: 700 !important; letter-spacing: -0.01em !important; text-transform: lowercase !important; }
 h3[style*="Newsreader"] { font-size: 32px !important; line-height: 1.15 !important; }
-p[style*="Newsreader"], div[style*="Newsreader"] { font-family: 'PolySans Trial', 'PolySans Trial Slim', 'PolySans Slim Trial', 'Space Grotesk', sans-serif !important; font-weight: 300 !important; letter-spacing: -0.04em !important; text-transform: lowercase !important; }
-div[style*="JetBrains Mono"]:not(.work-link):not(.footer-link):not(.tab-btn),
-span[style*="JetBrains Mono"]:not(.work-link):not(.footer-link):not(.tab-btn) { font-family: 'PP Mondwest', 'PPMondwest', 'PP Mondwest Regular', serif !important; letter-spacing: 0 !important; text-transform: lowercase !important; font-size: 15px !important; }
-a[style*="JetBrains Mono"], .work-link, .footer-link { font-family: 'PolySans Trial', 'PolySans Trial Slim', 'PolySans Slim Trial', 'Space Grotesk', sans-serif !important; letter-spacing: -0.02em !important; text-transform: lowercase !important; }
-.city-toggle, .hero-scroll-cue, .station-chip .chip-label, .mobile-tabbar a { font-family: 'PP Mondwest', 'PPMondwest', 'PP Mondwest Regular', serif !important; letter-spacing: 0 !important; text-transform: lowercase !important; }
-.station-chip .chip-desc { font-family: 'PolySans Trial', 'PolySans Trial Slim', 'PolySans Slim Trial', 'Space Grotesk', sans-serif !important; letter-spacing: -0.02em !important; text-transform: lowercase !important; }
+p[style*="Newsreader"], div[style*="Newsreader"] { font-family: 'PolySans Trial', 'Space Grotesk', sans-serif !important; font-weight: 300 !important; letter-spacing: -0.04em !important; text-transform: lowercase !important; }
+div[style*="JetBrains Mono"]:not(.work-link):not(.footer-link):not(.tab-btn):not(header *),
+span[style*="JetBrains Mono"]:not(.work-link):not(.footer-link):not(.tab-btn):not(header *) { font-family: 'PP Mondwest', serif !important; letter-spacing: 0 !important; text-transform: lowercase !important; font-size: 15px !important; }
+a[style*="JetBrains Mono"], .work-link, .footer-link { font-family: 'PolySans Trial', 'Space Grotesk', sans-serif !important; letter-spacing: -0.02em !important; text-transform: lowercase !important; }
+.city-toggle, .hero-scroll-cue, .station-chip .chip-label, .mobile-tabbar a { font-family: 'PP Mondwest', serif !important; letter-spacing: 0 !important; text-transform: lowercase !important; }
+.station-chip .chip-desc { font-family: 'PolySans Trial', 'Space Grotesk', sans-serif !important; letter-spacing: -0.02em !important; text-transform: lowercase !important; }
 :root[data-theme="dark"] .img-slot { background: rgba(185,196,176,0.08); border-color: rgba(185,196,176,0.25); }
 :root[data-theme="dark"] .link-cta { background: #F0EBDD; color: #0F1E17 !important; }
 :root[data-theme="dark"] .link-cta:hover { background: #ffffff; }
