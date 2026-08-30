@@ -453,6 +453,10 @@ a { transition: color .25s ease; }
 :root[data-theme="dark"] .station-chip, :root[data-theme="dark"] .city-toggle, :root[data-theme="dark"] .hero-menu-btn, :root[data-theme="dark"] .hero-mobile-menu { background: #17281F; border-color: rgba(180,200,180,0.16); box-shadow: 0 2px 10px rgba(0,0,0,0.35); }
 :root[data-theme="dark"] .station-chip .chip-label { color: #F0EBDD; }
 :root[data-theme="dark"] .station-chip .chip-desc { color: #B9C4B0; }
+:root[data-theme="dark"] h1 { color: #F0EBDD !important; }
+:root[data-theme="dark"] h2 { color: #F0EBDD !important; }
+:root[data-theme="dark"] h3 { color: #F0EBDD !important; }
+:root[data-theme="dark"] .project-prose { color: #B9C4B0 !important; }
 :root[data-theme="dark"] .hero-intro h1 { color: #F0EBDD; }
 :root[data-theme="dark"] .hero-intro p { color: #B9C4B0; }
 :root[data-theme="dark"] .hero-hint { color: #74897A; }

@@ -137,6 +137,7 @@ if (!id) {
     if (item.body && item.body.length) {
       const prose = document.createElement('div');
       prose.classList.add('reveal');
+      prose.classList.add('project-prose');
       prose.style.cssText = "font-family:'Newsreader',serif;font-size:20px;line-height:1.65;color:#3e3a33;margin-bottom:48px;";
       item.body.forEach((para, i) => {
         const p = document.createElement('p');
