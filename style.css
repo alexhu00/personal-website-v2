@@ -44,7 +44,7 @@ a { transition: color .25s ease; }
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #b3a997;
+  color: #736A5B;
   pointer-events: none;
 }
 
@@ -68,9 +68,9 @@ a { transition: color .25s ease; }
 .nav-icon:hover { color: #1B1714 !important; }
 .nav-icon.active { color: #1B1714 !important; }
 
-.footer-link:hover { color: #897F70 !important; }
-.work-link:hover { color: #897F70 !important; }
-.prose-link:hover { color: #897F70 !important; }
+.footer-link:hover { color: #736A5B !important; }
+.work-link:hover { color: #736A5B !important; }
+.prose-link:hover { color: #736A5B !important; }
 
 .status-btn {
   display: flex;
@@ -106,7 +106,7 @@ a { transition: color .25s ease; }
   transition: color .2s, background .2s;
 }
 .tab-btn.active { color: #1B1714; background: #E5DCC6; }
-.tab-btn.inactive { color: #897F70; background: none; }
+.tab-btn.inactive { color: #736A5B; background: none; }
 .tab-btn.inactive:hover { color: #1B1714; }
 
 .link-cta {
@@ -296,13 +296,13 @@ a { transition: color .25s ease; }
 .hero-intro.visible { opacity: 1; transform: none; }
 .hero-intro h1 { font-family: 'Crimson Text', serif; font-weight: 400; font-size: 34px; line-height: 1.05; letter-spacing: -0.01em; margin: 0; color: #1B1714; }
 .hero-intro p { font-family: 'Crimson Text', serif; font-size: 15px; line-height: 1.5; color: #6a635a; margin: 10px 0 12px; max-width: 420px; }
-.hero-hint { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.04em; color: #c3b99e; margin: 0; pointer-events: auto; }
+.hero-hint { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.04em; color: #736A5B; margin: 0; pointer-events: auto; }
 
 .city-toggle { display: inline-flex; align-items: center; gap: 8px; background: #FEF4E0; border: 1px solid rgba(27,23,20,0.14); border-radius: 999px; padding: 7px 14px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; box-shadow: 0 1px 4px rgba(27,23,20,0.1); pointer-events: auto; }
 .toggle-divider { width: 1px; height: 11px; background: rgba(137,127,112,0.35); }
 .lbl-nyc { color: #1B1714; font-weight: 700; }
-.lbl-tor { color: #b0a488; font-weight: 700; }
-#k-city:checked ~ * .lbl-nyc { color: #b0a488; }
+.lbl-tor { color: #736A5B; font-weight: 700; }
+#k-city:checked ~ * .lbl-nyc { color: #736A5B; }
 #k-city:checked ~ * .lbl-tor { color: #1B1714; }
 
 .station-chip { position: absolute; top: 0; left: 0; opacity: 0; pointer-events: none; transition: opacity .15s ease; z-index: 6; width: max-content; max-width: 220px; text-align: center; background: #FEF4E0; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 9px 16px; box-shadow: 0 2px 10px rgba(27,23,20,0.15); }
@@ -310,7 +310,7 @@ a { transition: color .25s ease; }
 .station-chip .chip-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #1B1714; }
 .station-chip .chip-desc { display: block; font-family: 'Crimson Text', serif; font-style: italic; font-size: 13px; color: #4f4942; margin-top: 2px; }
 
-.hero-scroll-cue { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 3; color: #897F70; text-decoration: none; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; pointer-events: auto; }
+.hero-scroll-cue { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 3; color: #736A5B; text-decoration: none; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; pointer-events: auto; }
 .hero-scroll-cue:hover { color: #1B1714; }
 .hero-scroll-cue svg { animation: scrollBounce 1.8s ease-in-out infinite; }
 @keyframes scrollBounce {
@@ -382,7 +382,7 @@ a { transition: color .25s ease; }
   }
   .mobile-tabbar a {
     display: flex; flex-direction: column; align-items: center; gap: 4px;
-    color: #897F70; text-decoration: none;
+    color: #736A5B; text-decoration: none;
     font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase;
   }
   .mobile-tabbar a.active { color: #1B1714; }
@@ -419,21 +419,21 @@ a { transition: color .25s ease; }
 :root[data-theme="dark"] [style*="color:#3e3a33"],
 :root[data-theme="dark"] [style*="color: #3e3a33"] { color: #B9C4B0 !important; }
 :root[data-theme="dark"] [style*="color:#897F70"],
-:root[data-theme="dark"] [style*="color: #897F70"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #897F70"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#aaa089"],
-:root[data-theme="dark"] [style*="color: #aaa089"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #aaa089"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#9a917f"],
-:root[data-theme="dark"] [style*="color: #9a917f"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #9a917f"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#b3a997"],
-:root[data-theme="dark"] [style*="color: #b3a997"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #b3a997"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#b0a488"],
-:root[data-theme="dark"] [style*="color: #b0a488"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #b0a488"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#b0a288"],
-:root[data-theme="dark"] [style*="color: #b0a288"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #b0a288"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#cabf9f"],
-:root[data-theme="dark"] [style*="color: #cabf9f"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #cabf9f"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="color:#c3b99e"],
-:root[data-theme="dark"] [style*="color: #c3b99e"] { color: #74897A !important; }
+:root[data-theme="dark"] [style*="color: #c3b99e"] { color: #8DA192 !important; }
 :root[data-theme="dark"] [style*="background:#FEF4E0"],
 :root[data-theme="dark"] [style*="background: #FEF4E0"] { background: #0F1E17 !important; }
 :root[data-theme="dark"] [style*="background:#F1ECE2"],
@@ -459,18 +459,18 @@ a { transition: color .25s ease; }
 :root[data-theme="dark"] .project-prose { color: #B9C4B0 !important; }
 :root[data-theme="dark"] .hero-intro h1 { color: #F0EBDD; }
 :root[data-theme="dark"] .hero-intro p { color: #B9C4B0; }
-:root[data-theme="dark"] .hero-hint { color: #74897A; }
+:root[data-theme="dark"] .hero-hint { color: #8DA192; }
 :root[data-theme="dark"] .lbl-nyc { color: #F0EBDD; }
-:root[data-theme="dark"] .lbl-tor { color: #74897A; }
-:root[data-theme="dark"] #k-city:checked ~ * .lbl-nyc { color: #74897A; }
+:root[data-theme="dark"] .lbl-tor { color: #8DA192; }
+:root[data-theme="dark"] #k-city:checked ~ * .lbl-nyc { color: #8DA192; }
 :root[data-theme="dark"] #k-city:checked ~ * .lbl-tor { color: #F0EBDD; }
-:root[data-theme="dark"] .hero-scroll-cue { color: #74897A; }
+:root[data-theme="dark"] .hero-scroll-cue { color: #8DA192; }
 :root[data-theme="dark"] .hero-scroll-cue:hover { color: #F0EBDD; }
 :root[data-theme="dark"] .hero-mobile-menu a { color: #F0EBDD; border-color: rgba(180,200,180,0.16); }
-:root[data-theme="dark"] .nav-icon { color: #74897A !important; }
+:root[data-theme="dark"] .nav-icon { color: #8DA192 !important; }
 :root[data-theme="dark"] .nav-icon:hover, :root[data-theme="dark"] .nav-icon.active { color: #F0EBDD !important; }
 :root[data-theme="dark"] .mobile-tabbar { background: #17281F; border-color: rgba(180,200,180,0.16); }
-:root[data-theme="dark"] .mobile-tabbar a { color: #74897A; }
+:root[data-theme="dark"] .mobile-tabbar a { color: #8DA192; }
 :root[data-theme="dark"] .mobile-tabbar a.active { color: #F0EBDD; }
 
 /* Site type system — PP Mondwest for lead-in/label copy, PP NeueBit for emphasis/titles, PolySans Trial (slim) for body */
@@ -500,6 +500,43 @@ a[style*="JetBrains Mono"], .work-link, .footer-link { font-family: 'PolySans Tr
 :root[data-theme="dark"] .link-cta { background: #F0EBDD; color: #0F1E17 !important; }
 :root[data-theme="dark"] .link-cta:hover { background: #ffffff; }
 :root[data-theme="dark"] .tab-btn.active { color: #F0EBDD; background: #17281F; }
-:root[data-theme="dark"] .tab-btn.inactive { color: #74897A; }
+:root[data-theme="dark"] .tab-btn.inactive { color: #8DA192; }
 :root[data-theme="dark"] .tab-btn.inactive:hover { color: #F0EBDD; }
 :root[data-theme="dark"] #k-fade stop { stop-color: #0F1E17 !important; }
+
+/* ============================================================
+   CONTRAST: keep every text role readable (WCAG AA) in both themes.
+   Browsers normalize colors set via element.style.cssText to rgb(), so
+   each inline color is matched in hex and rgb() form.
+   ============================================================ */
+:root:not([data-theme="dark"]) :is(
+  [style*="color:#aaa089"],
+  [style*="color: #aaa089"],
+  [style*="color: rgb(170, 160, 137)"],
+  [style*="color:#b0a288"],
+  [style*="color: #b0a288"],
+  [style*="color: rgb(176, 162, 136)"],
+  [style*="color:#b0a488"],
+  [style*="color: #b0a488"],
+  [style*="color: rgb(176, 164, 136)"],
+  [style*="color:#cabf9f"],
+  [style*="color: #cabf9f"],
+  [style*="color: rgb(202, 191, 159)"],
+  [style*="color:#9a917f"],
+  [style*="color: #9a917f"],
+  [style*="color: rgb(154, 145, 127)"],
+  [style*="color:#b3a997"],
+  [style*="color: #b3a997"],
+  [style*="color: rgb(179, 169, 151)"],
+  [style*="color:#897F70"],
+  [style*="color: #897F70"],
+  [style*="color: rgb(137, 127, 112)"],
+  [style*="color:#c3b99e"],
+  [style*="color: #c3b99e"],
+  [style*="color: rgb(195, 185, 158)"]
+):not(.nav-icon) { color: #736A5B !important; }
+
+/* dark inks that would vanish on the dark background (rgb() forms of JS-set colors) */
+:root[data-theme="dark"] :is([style*="color: rgb(27, 23, 20)"], [style*="color: rgb(26, 23, 20)"]) { color: #F0EBDD !important; }
+:root[data-theme="dark"] :is([style*="color: rgb(62, 58, 51)"], [style*="color: rgb(79, 73, 66)"], [style*="color: rgb(90, 84, 76)"], [style*="color: rgb(106, 99, 90)"]) { color: #B9C4B0 !important; }
+:root[data-theme="dark"] :is([style*="color: rgb(137, 127, 112)"], [style*="color: rgb(170, 160, 137)"], [style*="color: rgb(154, 145, 127)"], [style*="color: rgb(179, 169, 151)"]) { color: #8DA192 !important; }
