@@ -540,3 +540,12 @@ a[style*="JetBrains Mono"], .work-link, .footer-link { font-family: 'PolySans Tr
 :root[data-theme="dark"] :is([style*="color: rgb(27, 23, 20)"], [style*="color: rgb(26, 23, 20)"]) { color: #F0EBDD !important; }
 :root[data-theme="dark"] :is([style*="color: rgb(62, 58, 51)"], [style*="color: rgb(79, 73, 66)"], [style*="color: rgb(90, 84, 76)"], [style*="color: rgb(106, 99, 90)"]) { color: #B9C4B0 !important; }
 :root[data-theme="dark"] :is([style*="color: rgb(137, 127, 112)"], [style*="color: rgb(170, 160, 137)"], [style*="color: rgb(154, 145, 127)"], [style*="color: rgb(179, 169, 151)"]) { color: #8DA192 !important; }
+
+/* Project page long-form body: headings, lists, dividers */
+.project-prose h2 { font-family: 'PP NeueBit', 'Pixelify Sans', monospace; font-weight: 700; font-size: 30px; line-height: 1.15; letter-spacing: -0.01em; text-transform: lowercase; color: #1B1714; margin: 52px 0 16px; }
+.project-prose > h2:first-child { margin-top: 0; }
+.project-prose ul { margin: 0 0 22px; padding-left: 22px; }
+.project-prose li { margin: 0 0 12px; }
+.project-prose strong { font-weight: 700 !important; }
+.project-prose hr { border: none; border-top: 1px solid #E2DBCC; margin: 36px 0; }
+:root[data-theme="dark"] .project-prose hr { border-top-color: rgba(180,200,180,0.18); }

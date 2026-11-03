@@ -91,8 +91,8 @@ if (!id) {
     // Title
     const h1 = document.createElement('h1');
     h1.classList.add('reveal');
-    h1.style.cssText = "font-family:'Newsreader',serif;font-weight:400;font-size:52px;line-height:1.05;letter-spacing:-0.02em;margin:0 0 36px;color:#1B1714;";
-    h1.textContent = item.title;
+    h1.style.cssText = "font-family:'Newsreader',serif;font-weight:400;font-size:" + (item.headline ? 40 : 52) + "px;line-height:1.05;letter-spacing:-0.02em;margin:0 0 36px;color:#1B1714;";
+    h1.textContent = item.headline || item.title;
     c.appendChild(h1);
 
     // Top CTA: external link, shown up front so it's not missed
@@ -139,10 +139,40 @@ if (!id) {
       prose.classList.add('reveal');
       prose.classList.add('project-prose');
       prose.style.cssText = "font-family:'Newsreader',serif;font-size:20px;line-height:1.65;color:#3e3a33;margin-bottom:48px;";
-      item.body.forEach((para, i) => {
+      // Body lines: "## " heading, "- " list item (consecutive items group into one list),
+      // "---" divider, anything else a paragraph. **bold** works inline.
+      const inline = (el, text) => {
+        text.split(/(\*\*[^*]+\*\*)/).forEach(part => {
+          if (!part) return;
+          if (part.startsWith('**') && part.endsWith('**')) {
+            const s = document.createElement('strong');
+            s.textContent = part.slice(2, -2);
+            el.appendChild(s);
+          } else {
+            el.appendChild(document.createTextNode(part));
+          }
+        });
+      };
+      let list = null;
+      item.body.forEach((line, i) => {
+        if (line.startsWith('- ')) {
+          if (!list) { list = document.createElement('ul'); prose.appendChild(list); }
+          const li = document.createElement('li');
+          inline(li, line.slice(2));
+          list.appendChild(li);
+          return;
+        }
+        list = null;
+        if (line === '---') { prose.appendChild(document.createElement('hr')); return; }
+        if (line.startsWith('## ')) {
+          const h = document.createElement('h2');
+          inline(h, line.slice(3));
+          prose.appendChild(h);
+          return;
+        }
         const p = document.createElement('p');
         p.style.margin = i === 0 ? '0 0 22px' : '22px 0';
-        p.textContent = para;
+        inline(p, line);
         prose.appendChild(p);
       });
       c.appendChild(prose);
