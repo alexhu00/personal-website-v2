@@ -134,6 +134,7 @@ if (!id) {
     }
 
     // Body paragraphs
+    let galleryPlaced = false;
     if (item.body && item.body.length) {
       const prose = document.createElement('div');
       prose.classList.add('reveal');
@@ -163,6 +164,11 @@ if (!id) {
           return;
         }
         list = null;
+        if (line === '{{gallery}}') {
+          const g = buildGallery();
+          if (g) { prose.appendChild(g); galleryPlaced = true; }
+          return;
+        }
         if (line === '---') { prose.appendChild(document.createElement('hr')); return; }
         if (line.startsWith('## ')) {
           const h = document.createElement('h2');
@@ -178,9 +184,11 @@ if (!id) {
       c.appendChild(prose);
     }
 
-    // Extra images/videos gallery
-    const galleryItems = (item.images || []).slice(item.heroVideo ? 0 : 1);
-    if (galleryItems.length) {
+    // Extra images/videos gallery. Drops in wherever a "{{gallery}}" line sits in the body,
+    // otherwise goes after the body.
+    function buildGallery() {
+      const galleryItems = (item.images || []).slice(item.heroVideo ? 0 : 1);
+      if (!galleryItems.length) return null;
       const gallery = document.createElement('div');
       gallery.classList.add('reveal');
       gallery.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:48px;';
@@ -207,7 +215,11 @@ if (!id) {
         }
         gallery.appendChild(wrap);
       });
-      c.appendChild(gallery);
+      return gallery;
+    }
+    if (!galleryPlaced) {
+      const g = buildGallery();
+      if (g) c.appendChild(g);
     }
   });
 }
