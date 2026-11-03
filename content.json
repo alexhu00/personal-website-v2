@@ -403,9 +403,47 @@
         "src": "assets/photos/life/DSC03708.jpg",
         "type": "photo"
       }
+    ],
+    "featured": [
+      {
+        "src": "assets/videos/nyc-marathon-26.mp4",
+        "title": "NYC Marathon '26",
+        "tag": "Film"
+      },
+      {
+        "src": "assets/videos/brand-new-day-nyc.mp4",
+        "title": "Brand New Day NYC",
+        "tag": "Film"
+      }
     ]
   },
   "videos": [
+    {
+      "src": "assets/videos/nyc-marathon-26.mp4",
+      "title": "NYC Marathon '26",
+      "tag": "",
+      "instagram": "",
+      "orientation": "landscape"
+    },
+    {
+      "src": "assets/videos/brand-new-day-nyc.mp4",
+      "title": "Brand New Day NYC",
+      "tag": "",
+      "instagram": "",
+      "orientation": "landscape"
+    },
+    {
+      "src": "assets/videos/ryans-proposal.mp4",
+      "title": "Ryan's Proposal",
+      "tag": "",
+      "instagram": ""
+    },
+    {
+      "src": "assets/videos/unionville-go-train.mp4",
+      "title": "Unionville GO Train",
+      "tag": "",
+      "instagram": ""
+    },
     {
       "src": "assets/videos/vball chop 2.mp4",
       "title": "Vball Chop 2",

@@ -228,6 +228,16 @@
 
   <div style="max-width:960px;margin:0 auto;padding:0 40px;"><hr style="border:none;border-top:1px solid #E2DBCC;margin:48px 0 0;"></div>
 
+  <section id="featured-films" style="max-width:960px;margin:0 auto;padding:0 40px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:32px 0 20px;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">Featured films</span>
+      <a href="videos.html" class="work-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#1B1714;text-decoration:none;">All videos →</a>
+    </div>
+    <div id="featured-grid" class="featured-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:start;"></div>
+  </section>
+
+  <div style="max-width:960px;margin:0 auto;padding:0 40px;"><hr style="border:none;border-top:1px solid #E2DBCC;margin:48px 0 0;"></div>
+
   <section style="max-width:960px;margin:0 auto;padding:0 40px;">
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:32px 0 20px;">
       <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa089;">03 · Work &amp; Projects</span>
@@ -392,14 +402,22 @@ function openPhoto(src){
   document.getElementById('lb-video').innerHTML='';
   lb.style.display='flex';
 }
-function openVideo(url){
-  let embedUrl=url;
-  const yt=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
-  if(yt)embedUrl=`https://www.youtube.com/embed/${yt[1]}?autoplay=1`;
+function openVideo(arg){
   const lb=document.getElementById('lightbox');
   document.getElementById('lb-img').style.display='none';
   const vd=document.getElementById('lb-video');
-  vd.innerHTML=`<iframe src="${embedUrl}" style="width:100%;height:100%;border:none;border-radius:4px;" allow="autoplay;fullscreen" allowfullscreen></iframe>`;
+  if(arg && typeof arg==='object' && arg.src){
+    vd.style.cssText = arg.aspect==='16/9'
+      ? 'width:90vw;max-width:1100px;aspect-ratio:16/9;'
+      : 'width:90vw;max-width:560px;aspect-ratio:9/16;';
+    vd.innerHTML=`<video src="${arg.src}" style="width:100%;height:100%;border-radius:4px;background:#000;" controls autoplay playsinline></video>`;
+  } else {
+    let embedUrl=arg;
+    const yt=String(arg).match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+    if(yt)embedUrl=`https://www.youtube.com/embed/${yt[1]}?autoplay=1`;
+    vd.style.cssText='width:90vw;max-width:900px;aspect-ratio:16/9;';
+    vd.innerHTML=`<iframe src="${embedUrl}" style="width:100%;height:100%;border:none;border-radius:4px;" allow="autoplay;fullscreen" allowfullscreen></iframe>`;
+  }
   vd.style.display='block';lb.style.display='flex';
 }
 function closeLightbox(){
@@ -444,6 +462,32 @@ fetch('content.json').then(r=>r.json()).then(data=>{
       div.addEventListener('click',()=>{ if(item.src)openPhoto(item.src); });
     }
     hg.appendChild(div);
+  });
+
+  // Featured films (large, click to play)
+  const fg=document.getElementById('featured-grid');
+  (data.home.featured||[]).forEach(f=>{
+    const art=document.createElement('article');art.classList.add('reveal');
+    const wrap=document.createElement('div');
+    wrap.style.cssText='position:relative;cursor:pointer;border-radius:6px;overflow:hidden;aspect-ratio:16/9;background:#1a1714;';
+    const vid=document.createElement('video');
+    vid.src=f.src;vid.preload='metadata';vid.muted=true;vid.loop=true;vid.playsInline=true;
+    vid.style.cssText='width:100%;height:100%;object-fit:cover;display:block;';
+    const still=f.previewTime??3;
+    vid.addEventListener('loadedmetadata',()=>{vid.currentTime=still;});
+    wrap.addEventListener('mouseenter',()=>{vid.play();});
+    wrap.addEventListener('mouseleave',()=>{vid.pause();vid.currentTime=still;});
+    wrap.addEventListener('click',()=>openVideo({src:f.src,aspect:'16/9'}));
+    wrap.appendChild(vid);
+    const badge=document.createElement('span');
+    badge.style.cssText='position:absolute;left:14px;bottom:14px;pointer-events:none;width:36px;height:36px;border-radius:999px;background:rgba(27,23,20,0.78);color:#f5f1e8;display:flex;align-items:center;justify-content:center;font-size:12px;padding-left:3px;';
+    badge.textContent='▶';wrap.appendChild(badge);
+    const title=document.createElement('h3');
+    title.style.cssText="font-family:'Newsreader',serif;font-weight:400;font-size:19px;margin:14px 0 0;color:#1B1714;";
+    title.textContent=f.title;
+    art.appendChild(wrap);art.appendChild(title);
+    if(f.tag){const t=document.createElement('span');t.style.cssText="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a917f;";t.textContent=f.tag;art.appendChild(t);}
+    fg.appendChild(art);
   });
 
   // Home work grid (first 2 selected items)

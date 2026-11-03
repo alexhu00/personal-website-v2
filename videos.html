@@ -31,7 +31,7 @@
   </header>
 
   <section style="max-width:1040px;margin:0 auto;padding:0 40px;">
-    <div id="video-grid" class="video-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px 22px;"></div>
+    <div id="video-grid" class="video-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px 22px;align-items:start;"></div>
   </section>
 
   <footer style="max-width:960px;margin:72px auto 0;padding:40px 40px 64px;border-top:1px solid #E2DBCC;">
@@ -56,6 +56,9 @@
 <script>
 function openVideo(v) {
   const vd = document.getElementById('lb-video');
+  vd.style.cssText = v.orientation === 'landscape'
+    ? 'width:90vw;max-width:1100px;aspect-ratio:16/9;'
+    : 'width:90vw;max-width:560px;aspect-ratio:9/16;';
   if (v.src) {
     vd.innerHTML = `<video src="${v.src}" style="width:100%;height:100%;border-radius:6px;background:#000;" controls autoplay playsinline></video>`;
   } else if (v.url) {
@@ -77,9 +80,11 @@ fetch('content.json').then(r => r.json()).then(data => {
   data.videos.forEach(v => {
     const article = document.createElement('article');
     article.classList.add('reveal');
+    const landscape = v.orientation === 'landscape';
+    if (landscape) article.style.gridColumn = 'span 2';
 
     const thumbWrap = document.createElement('div');
-    thumbWrap.style.cssText = 'position:relative;cursor:pointer;border-radius:6px;overflow:hidden;aspect-ratio:9/16;background:#1a1714;';
+    thumbWrap.style.cssText = 'position:relative;cursor:pointer;border-radius:6px;overflow:hidden;aspect-ratio:' + (landscape ? '16/9' : '9/16') + ';background:#1a1714;';
     thumbWrap.addEventListener('click', () => openVideo(v));
 
     if (v.src) {
